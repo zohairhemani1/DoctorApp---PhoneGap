@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Doctor Visit 247</title>
+        <link href="css/style.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="img/logo.png" />  
+        </header>
+        <div class="wrapper">
+            <div class="title"><img src="img/doctor.png" class="title-logo"/><h1 id="title-prac" class="uppercase">Practitioners</h1></div>
+            <div class="doctor-details">
+                <img src="img/dr_elizabeth.png"/><p class="uppercase">
+                <p id="first_head"><strong>Dr. Elizabeth J Isalguez</strong><br/>Internist<br/>11 years of experience
+                <p id="second_head"><strong>Specialties</strong><br/>Internal Medicine
+                <p id="third_head"><strong>Certifications</strong><br/>Board Certified
+                <p id="fourth_head"><strong>Languages</strong><br/>English / French / Spanish</div>
+            <p id="prac_about">Dr. Elizabeth Janet Isalguez is a multilingual Medical Doctor in Internal Medicine from the rigorous Yale University program at Bridgeport Hospital. She is fluent in Spanish and French in addition to her native English. Her specific interests include: tropical disease, weight management and nutrition, improving health and vitality from the basic core.</p>
+            <div class="footer"><a class="btn callus" href="tel:" id="call_us" target="_blank">Call Us Now!</a></div>
+        </div>
+    </body>
+    <script src="js/string.js"></script>
+    <script>
+        var APP_CONSTANTS = ENGLISH_CONSTANTS;
+        document.getElementById('title-prac').innerHTML = APP_CONSTANTS.PRACTITIONERS;
+        document.getElementById('first_head').innerHTML = "<strong>"+APP_CONSTANTS.PRAC_NAME+"</strong><br/>"+APP_CONSTANTS.PRAC_QUALIFICATION+"<br/>"+APP_CONSTANTS.PRAC_EXPERIENCE;
+        document.getElementById('second_head').innerHTML = "<strong>"+APP_CONSTANTS.PRAC_SPECIALITY_LBL+"</strong><br/>"+APP_CONSTANTS.PRAC_SPECIALITY_VAL;
+        document.getElementById('third_head').innerHTML = "<strong>"+APP_CONSTANTS.PRAC_CERTIFICATION_LBL+"</strong><br/>"+APP_CONSTANTS.PRAC_CERTIFICATION_VAL;
+        document.getElementById('fourth_head').innerHTML = "<strong>"+APP_CONSTANTS.PRAC_LANGUAGE_LBL+"</strong><br/>"+APP_CONSTANTS.PRAC_LANGUAGE_VAL;
+        document.getElementById('prac_about').innerHTML = APP_CONSTANTS.PRAC_ABOUT;
+        document.getElementById('call_us').innerHTML = APP_CONSTANTS.CALL_US;
+    </script>
+</html>

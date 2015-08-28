@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Doctor Visit 247</title>
+        <link href="css/default.css" type="text/css" rel="stylesheet" />
+        <link href="css/style.css" type="text/css" rel="stylesheet" />
+        
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+	<script src="js/jquery.js"></script>
+	<!--<script src="js/index.js"></script>-->
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="img/logo.png" />  
+        </header>
+        <div class="wrapper">
+            <div class="title"><img src="img/first_aid.png" class="title-logo"/><h1 id="title-request" class="uppercase"></h1></div>
+            <form>
+                <h3 id="request_form_head"></h3>
+                <label id="first_name" for="first_name"></label><input id="first_name" size="20" name="first_name" type="text" /><br/>
+                <label id="last_name" for="last_name"></label><input id="last_name" name="last_name" type="text" /><br/>
+                <label id="phone" for="phone"></label><input id="phone" name="phone" type="text" /><br/>
+            </form>
+            <div class="footer"><a class="btn next" id="next_step" href="tel:" target="_blank"></a></div>
+        </div>
+    </body>
+    <script src="js/string.js"></script>
+    <script>
+        var APP_CONSTANTS = ENGLISH_CONSTANTS;
+        document.getElementById('title-request').innerHTML = APP_CONSTANTS.REQUEST_VISIT + "<br /><span style='font-size:10px;'>"+APP_CONSTANTS.STEP_ONE+"</span>";
+        document.getElementById('request_form_head').innerHTML = APP_CONSTANTS.PATIENT_INFO;
+        document.getElementById('first_name').innerHTML = APP_CONSTANTS.FIRST_NAME;
+        document.getElementById('last_name').innerHTML = APP_CONSTANTS.LAST_NAME;
+        document.getElementById('phone').innerHTML = APP_CONSTANTS.PHONE;
+        document.getElementById('next_step').innerHTML = APP_CONSTANTS.NEXT_STEP;
+    </script>
+</html>

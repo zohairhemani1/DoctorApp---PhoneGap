@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Doctor Visit 247</title>
+        <link href="css/style.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="img/logo.png" />  
+        </header>
+        <div class="wrapper">
+            <div class="title"><img src="img/primary_care.png" class="title-logo"/><h1 id="title-about" class="uppercase"></h1></div>
+            <p id="first_line"></p>
+            <p id="second_line"></p>
+            <p id="third_line"></p>
+            <p id="fourth_line"></p>
+            <div class="footer"><a class="btn callus" id="call_us" href="tel:" target="_blank"></a></div>
+        </div>
+    </body>
+    <script src="js/string.js"></script>
+    <script>
+        var APP_CONSTANTS = ENGLISH_CONSTANTS;
+        document.getElementById('title-about').innerHTML = APP_CONSTANTS.ABOUT_US;
+        document.getElementById('first_line').innerHTML = APP_CONSTANTS.ABOUT_FIRST_LINE;
+        document.getElementById('second_line').innerHTML = APP_CONSTANTS.ABOUT_SECOND_LINE;
+        document.getElementById('third_line').innerHTML = APP_CONSTANTS.ABOUT_THIRD_LINE;
+        document.getElementById('fourth_line').innerHTML = APP_CONSTANTS.ABOUT_FOURTH_LINE;
+        document.getElementById('call_us').innerHTML = APP_CONSTANTS.CALL_US;
+    </script>
+</html>

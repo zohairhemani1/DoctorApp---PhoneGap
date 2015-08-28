@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Doctor Visit 247</title>
+        <link href="css/style.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <header class="home">
+            <img class="logo" src="img/logo.png" />  
+        </header>
+        <div class="wrapper">
+            <h1 id="index_head" style="text-align: center;">Select your language</h1>
+            <div class="footer"><p id="emergency_call" class="uppercase">If this is an emergency<br />please call 911</p>
+            <div style="margin-top:30px;"><a class="btn dial" id="dial" href="tel:911" target="_blank">Dial 911</a></div>
+        </div>
+    </body>
+    <script src="js/string.js"></script>
+    <script>
+        var APP_CONSTANTS = ENGLISH_CONSTANTS;
+        document.getElementById('index_head').innerHTML = APP_CONSTANTS.SELECT_LANGUAGE;
+        document.getElementById('emergency_call').innerHTML = APP_CONSTANTS.EMERGENCY+"<br />"+APP_CONSTANTS.CALL_911;
+        document.getElementById('dial').innerHTML = APP_CONSTANTS.DIAL_911;
+    </script>
+</html>
