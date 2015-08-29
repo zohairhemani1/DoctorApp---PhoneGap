@@ -14,6 +14,7 @@ var ENGLISH_CONSTANTS = {
     REQUEST_VISIT: "Request a visit",
     STEP_ONE: "step one",
     STEP_TWO: "step two",
+    STEP_THREE: "step three",
 	PATIENT_INFO: "Patient Information",
     FIRST_NAME: "First Name",
     LAST_NAME: "Last Name",
@@ -26,6 +27,7 @@ var ENGLISH_CONSTANTS = {
     PAYMENT_SUBMIT: "Secure Practioner Visit Payment",
     CALL_US: "Call Us Now!",
     NEXT_STEP: "NEXT STEP",
+    CONTINUE: "Continue",
     PAYMENT_FORM_HEAD: "Payment & Reservation",
     PAYMENT_FORM_FOOTER: "This payment only covers initial visit from our practitioner only.",
     ABOUT_FIRST_LINE: "Physician care in the comfort of your own home, workplace or hotel room.",
@@ -42,7 +44,12 @@ var ENGLISH_CONSTANTS = {
     PRAC_LANGUAGE_LBL: "Languages",
     PRAC_LANGUAGE_VAL: "English / French / Spanish",
     PRAC_ABOUT: "Dr. Elizabeth Janet Isalguez is a multilingual Medical Doctor in Internal Medicine from the rigorous Yale University program at Bridgeport Hospital. She is fluent in Spanish and French in addition to her native English. Her specific interests include: tropical disease, weight management and nutrition, improving health and vitality from the basic core.",
-    
+    LOCATION: "Patient's Location",
+    UNIT: "Suite/Apt/Unit",
+    STREET: "Street",
+    CITY: "City",
+    ZIPCODE: "Zip Code",
+    DIRECTIONS: "Special Directions",
     
     
     API_STATES: "geoipproximity/statesByCountry?countryAbbrv=",
@@ -109,8 +116,9 @@ var SPANISH_CONSTANTS = {
     PRACTITIONERS: "practicantes",
     OUR_SERVICES: "Nuestros servicios",
     REQUEST_VISIT: "Solicitar una visita",
-    STEP_ONE: "paso uno",
-    STEP_TWO: "paso dos",
+    STEP_ONE: "Paso uno",
+    STEP_TWO: "Paso dos",
+    STEP_THREE: "Paso tres",
 	PATIENT_INFO: "Información del paciente",
     FIRST_NAME: "Nombre de pila",
     LAST_NAME: "Apellido",
@@ -123,6 +131,7 @@ var SPANISH_CONSTANTS = {
     PAYMENT_SUBMIT: "Asegure Practioner Visita Pago",
     CALL_US: "Llámanos ahora!",
     NEXT_STEP: "EL PRÓXIMO PASO",
+    CONTINUE: "Continuar",
     PAYMENT_FORM_HEAD: "Pago y reserva",
     PAYMENT_FORM_FOOTER: "Este pago sólo cubre visita inicial de sólo nuestro médico.",
     ABOUT_FIRST_LINE: "Cuidado médico en la comodidad de su propio hogar , lugar de trabajo o habitación de hotel.",
@@ -138,7 +147,13 @@ var SPANISH_CONSTANTS = {
     PRAC_CERTIFICATION_VAL: "Certificado por la Junta",
     PRAC_LANGUAGE_LBL: "idiomas",
     PRAC_LANGUAGE_VAL: "English / French / Spanish",
-    PRAC_ABOUT: "Dr. Elizabeth Janet Isalguez es un Médico multilingüe en Medicina Interna del programa de la Universidad de Yale rigurosa en el Hospital Bridgeport . Habla con fluidez el español y el francés , además de su nativo de Inglés . Sus intereses específicos incluyen: enfermedades tropicales , control de peso y nutrición , mejorar la salud y la vitalidad del núcleo básico."
+    PRAC_ABOUT: "Dr. Elizabeth Janet Isalguez es un Médico multilingüe en Medicina Interna del programa de la Universidad de Yale rigurosa en el Hospital Bridgeport . Habla con fluidez el español y el francés , además de su nativo de Inglés . Sus intereses específicos incluyen: enfermedades tropicales , control de peso y nutrición , mejorar la salud y la vitalidad del núcleo básico.",
+    LOCATION: "Ubicación del paciente",
+    UNIT: "Suite / Apt / Unidad",
+    STREET: "callejero",
+    CITY: "Ciudad",
+    ZIPCODE: "Código postal",
+    DIRECTIONS: "Direcciones especiales"
 }
 
 var FRENCH_CONSTANTS = {
@@ -152,6 +167,7 @@ var FRENCH_CONSTANTS = {
     REQUEST_VISIT: "Demander une visite",
     STEP_ONE: "la première étape",
     STEP_TWO: "la deuxième étape",
+    STEP_THREE: "la troisième étape",
 	PATIENT_INFO: "information pour les patients",
     FIRST_NAME: "Prénom",
     LAST_NAME: "Nom de famille",
@@ -164,6 +180,7 @@ var FRENCH_CONSTANTS = {
     PAYMENT_SUBMIT: "Fixez Practioner Visitez paiement",
     CALL_US: "Appelez-nous maintenant!",
     NEXT_STEP: "PROCHAINE ÉTAPE",
+    CONTINUE: "continuer",
     PAYMENT_FORM_HEAD: "Paiement & Réservation",
     PAYMENT_FORM_FOOTER: "Ce paiement ne couvre que la première visite de notre praticien seulement.",
     ABOUT_FIRST_LINE: "Médecin de soins dans le confort de votre propre maison , au travail ou chambre d'hôtel.",
@@ -179,7 +196,13 @@ var FRENCH_CONSTANTS = {
     PRAC_CERTIFICATION_VAL: "Board Certified",
     PRAC_LANGUAGE_LBL: "langues",
     PRAC_LANGUAGE_VAL: "English / French / Spanish",
-    PRAC_ABOUT: "Dr Elizabeth Janet Isalguez est Docteur en Médecine multilingue en médecine interne de l' Université de Yale programme rigoureux à l'hôpital de Bridgeport . Elle parle couramment l'espagnol et le français en plus de sa langue maternelle anglaise . Ses intérêts spécifiques comprennent : les maladies tropicales , la gestion du poids et de la nutrition , l'amélioration de la santé et de la vitalité du noyau de base."
+    PRAC_ABOUT: "Dr Elizabeth Janet Isalguez est Docteur en Médecine multilingue en médecine interne de l' Université de Yale programme rigoureux à l'hôpital de Bridgeport . Elle parle couramment l'espagnol et le français en plus de sa langue maternelle anglaise . Ses intérêts spécifiques comprennent : les maladies tropicales , la gestion du poids et de la nutrition , l'amélioration de la santé et de la vitalité du noyau de base.",
+    LOCATION: "Localisation du patient",
+    UNIT: "Suite / Apt / Unité",
+    STREET: "de rue",
+    CITY: "Ville",
+    ZIPCODE: "Code postal",
+    DIRECTIONS: "Indications spéciales"
 }
 
 var JSON_CONSTANTS = {

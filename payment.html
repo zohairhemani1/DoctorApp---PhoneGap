@@ -22,12 +22,18 @@
                 <input type="submit" id="btn_submit" />
                 <i><p id="payment_form_footer"></p></i>
             </form>
-            <div class="footer"><a class="btn callus" id="callus" href="tel:" target="_blank">Call Us Now!</a></div>
+            <div class="footer"><a class="btns callus" id="callus" href="tel:" target="_blank">Call Us Now!</a></div>
         </div>
     </body>
     <script src="js/string.js"></script>
     <script>
-        var APP_CONSTANTS = ENGLISH_CONSTANTS;
+        if(localStorage.language == "French"){
+            var APP_CONSTANTS = FRENCH_CONSTANTS;
+        }else if(localStorage.language == "Spanish"){
+            var APP_CONSTANTS = SPANISH_CONSTANTS;
+        }else{
+            var APP_CONSTANTS = ENGLISH_CONSTANTS;
+        }
         document.getElementById('title-payments').innerHTML = APP_CONSTANTS.REQUEST_VISIT + "<br /><span style='font-size:10px;'>"+APP_CONSTANTS.STEP_TWO+"</span>";
         document.getElementById('first_name').innerHTML = APP_CONSTANTS.FIRST_NAME;
         document.getElementById('last_name').innerHTML = APP_CONSTANTS.LAST_NAME;

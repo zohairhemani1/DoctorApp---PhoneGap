@@ -16,12 +16,18 @@
                 <p id="third_head"><strong>Certifications</strong><br/>Board Certified
                 <p id="fourth_head"><strong>Languages</strong><br/>English / French / Spanish</div>
             <p id="prac_about">Dr. Elizabeth Janet Isalguez is a multilingual Medical Doctor in Internal Medicine from the rigorous Yale University program at Bridgeport Hospital. She is fluent in Spanish and French in addition to her native English. Her specific interests include: tropical disease, weight management and nutrition, improving health and vitality from the basic core.</p>
-            <div class="footer"><a class="btn callus" href="tel:" id="call_us" target="_blank">Call Us Now!</a></div>
+            <div class="footer"><a class="btns callus" href="tel:" id="call_us" target="_blank">Call Us Now!</a></div>
         </div>
     </body>
     <script src="js/string.js"></script>
     <script>
-        var APP_CONSTANTS = ENGLISH_CONSTANTS;
+        if(localStorage.language == "French"){
+            var APP_CONSTANTS = FRENCH_CONSTANTS;
+        }else if(localStorage.language == "Spanish"){
+            var APP_CONSTANTS = SPANISH_CONSTANTS;
+        }else{
+            var APP_CONSTANTS = ENGLISH_CONSTANTS;
+        }
         document.getElementById('title-prac').innerHTML = APP_CONSTANTS.PRACTITIONERS;
         document.getElementById('first_head').innerHTML = "<strong>"+APP_CONSTANTS.PRAC_NAME+"</strong><br/>"+APP_CONSTANTS.PRAC_QUALIFICATION+"<br/>"+APP_CONSTANTS.PRAC_EXPERIENCE;
         document.getElementById('second_head').innerHTML = "<strong>"+APP_CONSTANTS.PRAC_SPECIALITY_LBL+"</strong><br/>"+APP_CONSTANTS.PRAC_SPECIALITY_VAL;
