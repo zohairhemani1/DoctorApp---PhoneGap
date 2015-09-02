@@ -8,17 +8,17 @@
             <img class="logo" src="img/logo.png" />  
         </header>
         <div class="wrapper">
-            <h1 id="index_head" style="text-align: center;">Select your language</h1>
-            
+            <h1 id="index_head" style="text-align: center;">Select 323 language</h1>
+           <div align="center"> 
             <ul id="nav">
                 <li><a href="index.html?1">English</a></li>
                 <li><a href="index.html?2">Spanish</a></li>
                 <li><a href="index.html?3">French</a></li>
             </ul>
+            </div>
             
-            
-            <div class="footer bottom"><p id="emergency_call" class="uppercase">If this is an emergency<br />please call 911</p>
-            <div style="margin-top:30px;"><a class="btns dial" id="dial" href="tel:911" target="_blank">Dial 911</a></div>
+            <div class="footer bottom"><p id="emergency_call" class="uppercase">IF this is an emergency<br />please call 911</p>
+            <div  align="center" style="margin-top:30px; padding-left:32%"><a class="btns dial" id="dial" href="tel:911" target="_blank" style="display:block;width:36%;height:120%;font-size: 120%;border: 1px solid white;">DIAL 911</a></div>
         </div>
     </body>
     <script src="js/selectnav/selectnav.min.js"></script>
@@ -51,7 +51,7 @@
         }
         
         document.getElementById('index_head').innerHTML = APP_CONSTANTS.SELECT_LANGUAGE;
-        document.getElementById('emergency_call').innerHTML = APP_CONSTANTS.EMERGENCY+"<br />"+APP_CONSTANTS.CALL_911;
-        document.getElementById('dial').innerHTML = APP_CONSTANTS.DIAL_911;
+        document.getElementById('emergency_call').innerHTML = APP_CONSTANTS.EMERGENCY+"<br />"+APP_CONSTANTS.CALL_911.toUpperCase;
+        document.getElementById('dial').innerHTML = APP_CONSTANTS.DIAL_911.toUpperCase;
     </script>
 </html>

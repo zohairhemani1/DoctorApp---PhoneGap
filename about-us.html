@@ -5,14 +5,24 @@
     </head>
     <body>
         <header>
-            <img class="logo" src="img/logo.png" />  
+            <img class="logo" src="img/logo.png" />
+            <img class="sidelogo" src="img/doc2.png" /> 
+            
         </header>
         <div class="wrapper">
             <div class="title"><img src="img/primary_care.png" class="title-logo"/><h1 id="title-about" class="uppercase"></h1></div>
-            <p id="first_line"></p>
-            <p id="second_line"></p>
-            <p id="third_line"></p>
-            <p id="fourth_line"></p>
+          <b>  <p id="first_line" style="font-size:13;    text-align: justify;
+    -ms-text-justify: distribute-all-lines;
+    text-justify: distribute-all-lines;"></p>
+            <p id="second_line"  style="font-size:13;    text-align: justify;
+    -ms-text-justify: distribute-all-lines;
+    text-justify: distribute-all-lines;"></p>
+            <p id="third_line"  style="font-size:13;    text-align: justify;
+    -ms-text-justify: distribute-all-lines;
+    text-justify: distribute-all-lines;"></p>
+            <p id="fourth_line"  style="font-size:13;    text-align: justify;
+    -ms-text-justify: distribute-all-lines;
+    text-justify: distribute-all-lines;"></p></b>
             <div class="footer"><a class="btns callus" id="call_us" href="tel:" target="_blank"></a></div>
         </div>
     </body>
@@ -25,11 +35,11 @@
         }else{
             var APP_CONSTANTS = ENGLISH_CONSTANTS;
         }
-        document.getElementById('title-about').innerHTML = APP_CONSTANTS.ABOUT_US;
-        document.getElementById('first_line').innerHTML = APP_CONSTANTS.ABOUT_FIRST_LINE;
-        document.getElementById('second_line').innerHTML = APP_CONSTANTS.ABOUT_SECOND_LINE;
-        document.getElementById('third_line').innerHTML = APP_CONSTANTS.ABOUT_THIRD_LINE;
-        document.getElementById('fourth_line').innerHTML = APP_CONSTANTS.ABOUT_FOURTH_LINE;
-        document.getElementById('call_us').innerHTML = APP_CONSTANTS.CALL_US;
+        document.getElementById('title-about').innerHTML = APP_CONSTANTS.ABOUT_US.toUpperCase;
+        document.getElementById('first_line').innerHTML = APP_CONSTANTS.ABOUT_FIRST_LINE.toUpperCase;
+        document.getElementById('second_line').innerHTML = APP_CONSTANTS.ABOUT_SECOND_LINE.toUpperCase;
+        document.getElementById('third_line').innerHTML = APP_CONSTANTS.ABOUT_THIRD_LINE.toUpperCase;
+        document.getElementById('fourth_line').innerHTML = APP_CONSTANTS.ABOUT_FOURTH_LINE.toUpperCase;
+        document.getElementById('call_us').innerHTML = APP_CONSTANTS.CALL_US.toUpperCase;
     </script>
 </html>

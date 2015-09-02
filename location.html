@@ -6,7 +6,8 @@
     </head>
     <body>
         <header>
-            <img class="logo" src="img/logo.png" />  
+            <img class="logo" src="img/logo.png" />
+            <img class="sidelogo" src="img/doc2.png" /> 
         </header>
         <div class="wrapper">
             <div class="title"><img src="img/first_aid.png" class="title-logo"/><h1 id="title-location" class="uppercase">Request a visit<br /><span style='font-size:10px;'>Step two</span></h1></div>
@@ -33,13 +34,13 @@
         }
         
         document.getElementById('title-location').innerHTML = APP_CONSTANTS.REQUEST_VISIT + "<br /><span style='font-size:10px;'>"+APP_CONSTANTS.STEP_ONE+"</span>";
-        document.getElementById('location_form_head').innerHTML = APP_CONSTANTS.LOCATION;
-        document.getElementById('unit').innerHTML = APP_CONSTANTS.UNIT;
-        document.getElementById('street').innerHTML = APP_CONSTANTS.STREET;
-        document.getElementById('city').innerHTML = APP_CONSTANTS.CITY;
-        document.getElementById('zipcode').innerHTML = APP_CONSTANTS.ZIPCODE;
-        document.getElementById('directions').innerHTML = APP_CONSTANTS.DIRECTIONS;
-        document.getElementById('next_step').innerHTML = APP_CONSTANTS.NEXT_STEP;
+        document.getElementById('location_form_head').innerHTML = APP_CONSTANTS.LOCATION.toUpperCase;
+        document.getElementById('unit').innerHTML = APP_CONSTANTS.UNIT.toUpperCase;
+        document.getElementById('street').innerHTML = APP_CONSTANTS.STREET.toUpperCase;
+        document.getElementById('city').innerHTML = APP_CONSTANTS.CITY.toUpperCase;
+        document.getElementById('zipcode').innerHTML = APP_CONSTANTS.ZIPCODE.toUpperCase;
+        document.getElementById('directions').innerHTML = APP_CONSTANTS.DIRECTIONS.toUpperCase;
+        document.getElementById('next_step').innerHTML = APP_CONSTANTS.NEXT_STEP.toUpperCase;
         
         document.locationForm.burns.value = window.location;
         var text = document.locationForm.burns.value;

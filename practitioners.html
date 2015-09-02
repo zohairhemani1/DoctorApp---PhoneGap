@@ -5,17 +5,20 @@
     </head>
     <body>
         <header>
-            <img class="logo" src="img/logo.png" />  
+            <img class="logo" src="img/logo.png" />
+            <img class="sidelogo" src="img/doc2.png" /> 
         </header>
-        <div class="wrapper">
+        <div class="wrapper" style="ext-align: justify;
+    -ms-text-justify: distribute-all-lines;
+    text-justify: distribute-all-lines">
             <div class="title"><img src="img/doctor.png" class="title-logo"/><h1 id="title-prac" class="uppercase">Practitioners</h1></div>
             <div class="doctor-details">
                 <img src="img/dr_elizabeth.png"/><p class="uppercase">
-                <p id="first_head"><strong>Dr. Elizabeth J Isalguez</strong><br/>Internist<br/>11 years of experience
-                <p id="second_head"><strong>Specialties</strong><br/>Internal Medicine
-                <p id="third_head"><strong>Certifications</strong><br/>Board Certified
-                <p id="fourth_head"><strong>Languages</strong><br/>English / French / Spanish</div>
-            <p id="prac_about">Dr. Elizabeth Janet Isalguez is a multilingual Medical Doctor in Internal Medicine from the rigorous Yale University program at Bridgeport Hospital. She is fluent in Spanish and French in addition to her native English. Her specific interests include: tropical disease, weight management and nutrition, improving health and vitality from the basic core.</p>
+                <p id="first_head"><strong>DR. ELIZABETH J ISALGUEZ</strong><br/>INTERNIST<br/>11 YEARS OF EXPERIENCE
+                <p id="second_head"><strong>SPECIALTIES</strong><br/>INTERNAL MEDICINE
+                <p id="third_head"><strong>CERTIFICATIONS</strong><br/>BOARD CERTIFIED
+                <p id="fourth_head"><strong>LANGUAGES</strong><br/>ENGLISH / FRENCH / SPANISH</div>
+            <p id="prac_about">DR. ELIZABETH JANET ISALGUEZ IS A MULTILINGUAL MEDICAL DOCTOR IN INTERNAL MEDICINE FROM THE RIGOROUS YALE UNIVERSITY PROGRAM AT BRIDGEPORT HOSPITAL. SHE IS FLUENT IN SPANISH AND FRENCH IN ADDITION TO HER NATIVE ENGLISH. HER SPECIFIC INTERESTS INCLUDE: TROPICAL DISEASE, WEIGHT MANAGEMENT AND NUTRITION, IMPROVING HEALTH AND VITALITY FROM THE BASIC CORE.</p>
             <div class="footer"><a class="btns callus" href="tel:" id="call_us" target="_blank">Call Us Now!</a></div>
         </div>
     </body>
@@ -28,12 +31,12 @@
         }else{
             var APP_CONSTANTS = ENGLISH_CONSTANTS;
         }
-        document.getElementById('title-prac').innerHTML = APP_CONSTANTS.PRACTITIONERS;
-        document.getElementById('first_head').innerHTML = "<strong>"+APP_CONSTANTS.PRAC_NAME+"</strong><br/>"+APP_CONSTANTS.PRAC_QUALIFICATION+"<br/>"+APP_CONSTANTS.PRAC_EXPERIENCE;
-        document.getElementById('second_head').innerHTML = "<strong>"+APP_CONSTANTS.PRAC_SPECIALITY_LBL+"</strong><br/>"+APP_CONSTANTS.PRAC_SPECIALITY_VAL;
-        document.getElementById('third_head').innerHTML = "<strong>"+APP_CONSTANTS.PRAC_CERTIFICATION_LBL+"</strong><br/>"+APP_CONSTANTS.PRAC_CERTIFICATION_VAL;
-        document.getElementById('fourth_head').innerHTML = "<strong>"+APP_CONSTANTS.PRAC_LANGUAGE_LBL+"</strong><br/>"+APP_CONSTANTS.PRAC_LANGUAGE_VAL;
-        document.getElementById('prac_about').innerHTML = APP_CONSTANTS.PRAC_ABOUT;
-        document.getElementById('call_us').innerHTML = APP_CONSTANTS.CALL_US;
+        document.getElementById('title-prac').innerHTML = APP_CONSTANTS.PRACTITIONERS.toUpperCase();
+        document.getElementById('first_head').innerHTML = "<strong>"+APP_CONSTANTS.PRAC_NAME.toUpperCase()+"</strong><br/>"+APP_CONSTANTS.PRAC_QUALIFICATION.toUpperCase()+"<br/>"+APP_CONSTANTS.PRAC_EXPERIENCE.toUpperCase();
+        document.getElementById('second_head').innerHTML = "<strong>"+APP_CONSTANTS.PRAC_SPECIALITY_LBL.toUpperCase()+"</strong><br/>"+APP_CONSTANTS.PRAC_SPECIALITY_VAL.toUpperCase();
+        document.getElementById('third_head').innerHTML = "<strong>"+APP_CONSTANTS.PRAC_CERTIFICATION_LBL.toUpperCase()+"</strong><br/>"+APP_CONSTANTS.PRAC_CERTIFICATION_VAL.toUpperCase();
+        document.getElementById('fourth_head').innerHTML = "<strong>"+APP_CONSTANTS.PRAC_LANGUAGE_LBL.toUpperCase()+"</strong><br/>"+APP_CONSTANTS.PRAC_LANGUAGE_VAL.toUpperCase();
+        document.getElementById('prac_about').innerHTML = APP_CONSTANTS.PRAC_ABOUT.toUpperCase();
+        document.getElementById('call_us').innerHTML = APP_CONSTANTS.CALL_US.toUpperCase();
     </script>
 </html>

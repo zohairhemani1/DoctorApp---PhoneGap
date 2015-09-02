@@ -23,10 +23,18 @@ header img.logo{
     /*max-width: 361px;*/
 }
 
+header img.sidelogo{
+    float: right;
+    padding-right: 6%;
+    padding-top: 13%;
+
+    /*max-width: 361px;*/
+}
+
 
 
 .wrapper{text-align:left; width: 96%; margin: 0 auto;}
-.uppercase { text-transform: uppercase; }
+.uppercase { text-transform: uppercase; font-size: 20 }
 .title {display: block; height:55px; margin-top: 20px; /*width: 280px; margin-left: auto; margin-right:auto;*/ }
 .title .title-logo { width: 55px; float: left; } 
 .title h1 { float: left; padding-left: 10px; }
@@ -45,11 +53,14 @@ header img.logo{
 
 
 /*Menu*/
-.menu-row { margin: 30px 0px; padding: 0px 6%;}
-.menu-row img { width:100px; position:relative; }
+.menu-row { margin: 18px 0px; padding: 0px 4%;    padding-right: 13%;}
+.menu-row img { width:125px; position:relative; }
 .menu-row div { width:100px; }
 .menu-row div:first-child { float:right; }
-.menu-row div p { text-align:center; }
+.menu-row div p {     text-align: -webkit-right;
+    position: relative;
+    top: -10px;
+font-size: 14.5px}
 
 /*Button*/
 .btns { text-decoration: none; padding: 15px; border-radius: 10px; }
