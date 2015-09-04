@@ -2,6 +2,128 @@
     <head>
         <title>Doctor Visit 247</title>
         <link href="css/style.css" type="text/css" rel="stylesheet" />
+        
+            
+    <style>
+        @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);	
+
+
+#slider {
+ position: relative;
+  overflow: hidden;
+  margin: 20px auto 0 auto;
+  border-radius: 4px;
+<!--margin-left: 270px;-->
+}
+
+#slider ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  <!--height: 400px;-->
+  list-style: none;
+    padding-left: 100%;
+}
+
+#slider ul li {
+  <!--position: relative;-->
+  display: block;
+  <!--float: left;-->
+  margin: 0;
+  padding: 0;
+    width: 95%;
+<!--padding-left: 50%; -->
+  height: 50% !important;
+  <!--background: #ccc;-->
+  text-align: center;
+    height: 420px;
+  <!--line-height: 300px;-->
+}
+        
+        #slider ul li p 
+
+    {
+        width: 50%;
+    }
+
+a.control_prev, a.control_next {
+  position: absolute;
+  top: 40%;
+  z-index: 999;
+  display: block;
+  padding: 4% 3%;
+  width: auto;
+  height: auto;
+  background: #2a2a2a;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+
+
+a.control_next {
+  right: 2;
+  border-radius: 2px 0 0 2px;
+}
+    </style>
+        
+        
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+        <script>
+            jQuery(document).ready(function ($) {
+
+      $('#checkbox').change(function(){
+        setInterval(function () {
+            moveRight();
+        }, 3000);
+      });
+
+        var slideCount = $('#slider ul li').length;
+        var slideWidth = $('#slider ul li').width();
+        var slideHeight = $('#slider ul li').height();
+        //slideHeight =320px;        
+        var sliderUlWidth = slideCount * slideWidth;
+
+        $('#slider').css({ width: slideWidth, height: slideHeight });
+
+        $('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+
+        $('#slider ul li:last-child').prependTo('#slider ul');
+
+        function moveLeft() {
+            $('#slider ul').animate({
+                left: + slideWidth
+            }, 200, function () {
+                $('#slider ul li:last-child').prependTo('#slider ul');
+                $('#slider ul').css('left', '');
+            });
+        };
+
+        function moveRight() {
+            $('#slider ul').animate({
+                left: - slideWidth
+            }, 200, function () {
+                $('#slider ul li:first-child').appendTo('#slider ul');
+                $('#slider ul').css('left', '');
+            });
+        };
+
+        $('a.control_prev').click(function () {
+            moveLeft();
+        });
+
+        $('a.control_next').click(function () {
+            moveRight();
+        });
+
+    });    
+
+        </script>
     </head>
     <body>
         <header>
@@ -12,13 +134,41 @@
     -ms-text-justify: distribute-all-lines;
     text-justify: distribute-all-lines">
             <div class="title"><img src="img/doctor.png" class="title-logo"/><h1 id="title-prac" class="uppercase">Practitioners</h1></div>
-            <div class="doctor-details">
-                <img src="img/dr_elizabeth.png"/><p class="uppercase">
-                <p id="first_head"><strong>DR. ELIZABETH J ISALGUEZ</strong><br/>INTERNIST<br/>11 YEARS OF EXPERIENCE
-                <p id="second_head"><strong>SPECIALTIES</strong><br/>INTERNAL MEDICINE
-                <p id="third_head"><strong>CERTIFICATIONS</strong><br/>BOARD CERTIFIED
-                <p id="fourth_head"><strong>LANGUAGES</strong><br/>ENGLISH / FRENCH / SPANISH</div>
-            <p id="prac_about">DR. ELIZABETH JANET ISALGUEZ IS A MULTILINGUAL MEDICAL DOCTOR IN INTERNAL MEDICINE FROM THE RIGOROUS YALE UNIVERSITY PROGRAM AT BRIDGEPORT HOSPITAL. SHE IS FLUENT IN SPANISH AND FRENCH IN ADDITION TO HER NATIVE ENGLISH. HER SPECIFIC INTERESTS INCLUDE: TROPICAL DISEASE, WEIGHT MANAGEMENT AND NUTRITION, IMPROVING HEALTH AND VITALITY FROM THE BASIC CORE.</p>
+            
+           <div id="slider">
+               
+                <a href="#" class="control_next">></a>
+                <ul    style=" width: 100%; margin-left: 0%;">
+                    <li>
+                        <div class="doctor-details" style=" margin-top: 20;">
+                            <img src="img/dr_elizabeth.png"/><p class="uppercase">
+                            <p id="first_head"><strong>DR. ELIZABETH J ISALGUEZ</strong><br/>INTERNIST<br/>11 YEARS OF EXPERIENCE
+                            <p id="second_head"><strong>SPECIALTIES</strong><br/>INTERNAL MEDICINE
+                            <p id="third_head"><strong>CERTIFICATIONS</strong><br/>BOARD CERTIFIED
+                            <p id="fourth_head"><strong>LANGUAGES</strong><br/>ENGLISH / FRENCH / SPANISH
+                        </div>
+                        <p id="prac_about" style=" text-align: justify;
+                        text-justify: inter-word;font-size:11;font-weight: bold;">DR. ELIZABETH JANET ISALGUEZ IS A MULTILINGUAL MEDICAL DOCTOR IN INTERNAL                         MEDICINE FROM THE RIGOROUS YALE UNIVERSITY PROGRAM AT BRIDGEPORT HOSPITAL. SHE IS FLUENT IN SPANISH AND FRENCH IN ADDITION TO HER                           NATIVE ENGLISH. HER SPECIFIC INTERESTS INCLUDE: TROPICAL DISEASE, WEIGHT MANAGEMENT AND NUTRITION, IMPROVING HEALTH AND VITALITY FROM THE BASIC CORE.
+                        </p> 
+                    </li>
+                    
+                    <li>
+                        <div class="doctor-details" style=" margin-top: 20;">
+                            <img src="img/dr_elizabeth.png"/><p class="uppercase">
+                            <p id="second_name"><strong>dzsdsaj</strong><br/>INTERNIST<br/>11 YEARS OF EXPERIENCE
+                            <p id="second_head"><strong>SPECIALTIES</strong><br/>INTERNAL MEDICINE
+                            <p id="third_head"><strong>CERTIFICATIONS</strong><br/>BOARD CERTIFIED
+                            <p id="fourth_head"><strong>LANGUAGES</strong><br/>ENGLISH / FRENCH / SPANISH
+                        </div>
+                        <p id="prac_about" style=" text-align: justify;
+                        text-justify: inter-word;font-size:11;font-weight: bold;">DR. ELIZABETH JANET ISALGUEZ IS A MULTILINGUAL MEDICAL DOCTOR IN INTERNAL                         MEDICINE FROM THE RIGOROUS YALE UNIVERSITY PROGRAM AT BRIDGEPORT HOSPITAL. SHE IS FLUENT IN SPANISH AND FRENCH IN ADDITION TO HER                           NATIVE ENGLISH. HER SPECIFIC INTERESTS INCLUDE: TROPICAL DISEASE, WEIGHT MANAGEMENT AND NUTRITION, IMPROVING HEALTH AND VITALITY FROM THE BASIC CORE.
+                        </p> 
+                    </li>
+                    
+                    
+               </ul>
+            </div>
+            
             <div class="footer"><a class="btns callus" href="tel:" id="call_us" target="_blank">Call Us Now!</a></div>
         </div>
     </body>
@@ -32,10 +182,11 @@
             var APP_CONSTANTS = ENGLISH_CONSTANTS;
         }
         document.getElementById('title-prac').innerHTML = APP_CONSTANTS.PRACTITIONERS.toUpperCase();
-        document.getElementById('first_head').innerHTML = "<strong>"+APP_CONSTANTS.PRAC_NAME.toUpperCase()+"</strong><br/>"+APP_CONSTANTS.PRAC_QUALIFICATION.toUpperCase()+"<br/>"+APP_CONSTANTS.PRAC_EXPERIENCE.toUpperCase();
-        document.getElementById('second_head').innerHTML = "<strong>"+APP_CONSTANTS.PRAC_SPECIALITY_LBL.toUpperCase()+"</strong><br/>"+APP_CONSTANTS.PRAC_SPECIALITY_VAL.toUpperCase();
-        document.getElementById('third_head').innerHTML = "<strong>"+APP_CONSTANTS.PRAC_CERTIFICATION_LBL.toUpperCase()+"</strong><br/>"+APP_CONSTANTS.PRAC_CERTIFICATION_VAL.toUpperCase();
-        document.getElementById('fourth_head').innerHTML = "<strong>"+APP_CONSTANTS.PRAC_LANGUAGE_LBL.toUpperCase()+"</strong><br/>"+APP_CONSTANTS.PRAC_LANGUAGE_VAL.toUpperCase();
+        document.getElementById('first_head').innerHTML = "<strong>"+APP_CONSTANTS.PRAC_NAME.toUpperCase()+"</strong><br/><span class='adjust'>"+APP_CONSTANTS.PRAC_QUALIFICATION.toUpperCase()+"<br/>"+APP_CONSTANTS.PRAC_EXPERIENCE.toUpperCase();
+          document.getElementById('second_name').innerHTML = "<strong>Dr faramjee</strong><br/><span class='adjust'>"+APP_CONSTANTS.PRAC_QUALIFICATION.toUpperCase()+"<br/>"+APP_CONSTANTS.PRAC_EXPERIENCE.toUpperCase();
+        document.getElementById('second_head').innerHTML = "</span><strong>"+APP_CONSTANTS.PRAC_SPECIALITY_LBL.toUpperCase()+"</strong><span class='adjust'><br/>"+APP_CONSTANTS.PRAC_SPECIALITY_VAL.toUpperCase();
+        document.getElementById('third_head').innerHTML = "</span><strong>"+APP_CONSTANTS.PRAC_CERTIFICATION_LBL.toUpperCase()+"</strong><span class='adjust'>"+APP_CONSTANTS.PRAC_CERTIFICATION_VAL.toUpperCase();
+        document.getElementById('fourth_head').innerHTML = "</span> <hr style='height:1pt; visibility:hidden;' /> <strong>"+APP_CONSTANTS.PRAC_LANGUAGE_LBL.toUpperCase()+"</strong><span class='adjust'><br/>"+APP_CONSTANTS.PRAC_LANGUAGE_VAL.toUpperCase()+"</span>";
         document.getElementById('prac_about').innerHTML = APP_CONSTANTS.PRAC_ABOUT.toUpperCase();
         document.getElementById('call_us').innerHTML = APP_CONSTANTS.CALL_US.toUpperCase();
     </script>

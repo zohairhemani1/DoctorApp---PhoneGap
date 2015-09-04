@@ -84,13 +84,15 @@
         </script></head>
         <body>
         <header>
-            <img class="logo" src="img/logo.png" />  
+            <img class="logo" src="img/logo.png" />
+            <img class="sidelogo" src="img/doc2.png" /> 
         </header>
         <div class="wrapper">
             <div class="title"><img src="img/first_aid.png" class="title-logo"/><h1 id="title-request" class="uppercase"></h1></div>
-            <form id="request" method="get" action="location.html">
-                <h3 id="request_form_head"></h3>
-                <label id="first_name" for="first_name"></label><input id="first_name" name="first_name" type="text" /><br/>
+        
+            <form id="request" method="get" action="location.html" style="margin-top:8px">
+                <!--<h3 id="request_form_head"></h3>-->
+                <label id="first_name" for="first_name" ></label><input id="first_name" name="first_name" type="text" /><br/>
                 <label id="last_name" for="last_name"></label><input id="last_name" name="last_name" type="text" /><br/>
                 <label id="phone" for="phone"></label><input id="phone" name="phone" type="text" /><br/>
                 <input type="hidden" id="address" name="address">
@@ -110,8 +112,8 @@
         }else{
             var APP_CONSTANTS = ENGLISH_CONSTANTS;
         }
-        document.getElementById('title-request').innerHTML = APP_CONSTANTS.REQUEST_VISIT + "<br /><span style='font-size:10px;'>"+APP_CONSTANTS.STEP_ONE+"</span>";
-        document.getElementById('request_form_head').innerHTML = APP_CONSTANTS.PATIENT_INFO;
+        document.getElementById('title-request').innerHTML = APP_CONSTANTS.REQUEST_VISIT + "<br /><span style='font-size:11px;'>"+APP_CONSTANTS.STEP_ONE+" >> "+APP_CONSTANTS.PATIENT_INFO+"</span>";
+      //  document.getElementById('request_form_head').innerHTML = APP_CONSTANTS.PATIENT_INFO;
         document.getElementById('first_name').innerHTML = APP_CONSTANTS.FIRST_NAME;
         document.getElementById('last_name').innerHTML = APP_CONSTANTS.LAST_NAME;
         document.getElementById('phone').innerHTML = APP_CONSTANTS.PHONE;
