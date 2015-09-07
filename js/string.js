@@ -55,7 +55,15 @@ var ENGLISH_CONSTANTS = {
     PRAC2_CERTIFICATION_VAL: "AOA Certified",
     PRAC2_LANGUAGE_LBL: "Languages",
     PRAC2_LANGUAGE_VAL: "English / Creole / Spanish",
-    PRAC2_ABOUT: "Dr. Joan Y. Lyn graduated from the Nova Southeastern University College of Osteopathic Medicine in 2004. She works in North Miami Beach, FL and specializes in Family Medicine. Dr. Lyn is affiliated with Kindred Hospital-Hollywood, Memorial Hospital Miramar and Memorial Regional Hospital South.</br>Faculty Associate and Preceptor for Residents and Medical Students. Westchester Medical Center Family Medicine Program</br>Board Certified Family Practice</br>Westchester General Hospital, Family Medicine Residency Program</br>Dual degrees at Nova Southestern University; DO., MPH 2004</br>Undergrad at Barry university</br>Biology Major</br>AOA Liscened</br>ACOFP Board Certified",
+    PRAC2_ABOUT: "Dr. Joan Y. Lyn graduated from the Nova Southeastern University College of Osteopathic Medicine in 2004. She works in North Miami Beach, FL and specializes in Family Medicine. Dr. Lyn is affiliated with Kindred Hospital-Hollywood, Memorial Hospital Miramar and Memorial Regional Hospital South. / " +
+    "Faculty Associate and Preceptor for Residents and Medical Students. Westchester Medical Center Family Medicine Program /" +
+    " Board Certified Family Practice / " +
+    "Westchester General Hospital, Family Medicine Residency Program / " +
+    "Dual degrees at Nova Southestern University; DO., MPH 2004 / " +
+    "Undergrad at Barry university / " +
+    "Biology Major / " +
+    "AOA Liscened / " +
+    "ACOFP Board Certified",
 
 
     PRAC3_NAME: "Ketevan Vladi, MD",
@@ -64,7 +72,10 @@ var ENGLISH_CONSTANTS = {
     PRAC3_SPECIALITY_LBL: "Specialties",
     PRAC3_SPECIALITY_VAL: "Internal Medicine / General Internal Medicine / Hospital Medicine / Hospitalist",
     PRAC3_CERTIFICATION_LBL: "Certifications",
-    PRAC3_CERTIFICATION_VAL: "NY State Medical License</br>2010 – 2017FL State Medical License</br>2008 – 2017American Board of Internal Medicine</br>Internal Medicine",
+    PRAC3_CERTIFICATION_VAL: "NY State Medical License /" +
+    "2010 – 2017FL State Medical License / " +
+    "b2008 – 2017American Board of Internal Medicine / " +
+    "Internal Medicine",
     PRAC3_LANGUAGE_LBL: "Languages",
     PRAC3_LANGUAGE_VAL: "English / Ukrainian / Georgian / Russian",
     PRAC3_ABOUT: "Dr Ketevan Vladi is a Medical Doctor specializing in Internal Medicine and Hospital Medicine . She received her Medical Degree in Vinnica State Medical University and completed Internal Medicine Residency in New York Methodist Hospital. She has been practicing Hospital Medicine/ Internal Medicine in Miami since 2009",
@@ -174,16 +185,45 @@ var SPANISH_CONSTANTS = {
     ABOUT_SECOND_LINE: "Nuestros practicantes discretos vendrán a usted las 24 horas 7 días a la semana a su casa , hotel / resort o ubicación del Sur de la Florida y brindar atención médica de alta calidad para usted día o de noche.",
     ABOUT_THIRD_LINE: "Los tratamientos pueden ser en una sola vez , en la necesidad por o de forma continua. No hay secretarias, no hay enfermeras, no hay ambulancias o de espera para la atención.",
     ABOUT_FOURTH_LINE: "Emergencias surgen sin previo aviso o notificación . Nuestros practicantes proporcionan tiempos de respuesta rápidos y pueden proporcionar un tratamiento mucho más rápido y luego ir a la sala de emergencias o encontrar el hospital local.",
-    PRAC_NAME: "Dr. Elizabeth J Isalguez",
-    PRAC_QUALIFICATION: "internista",
-    PRAC_EXPERIENCE: "11 años de experiencia",
-    PRAC_SPECIALITY_LBL: "especialidades",
-    PRAC_SPECIALITY_VAL: "Medicina Interna",
-    PRAC_CERTIFICATION_LBL: "Certificaciones",
-    PRAC_CERTIFICATION_VAL: "Certificado por la Junta",
-    PRAC_LANGUAGE_LBL: "idiomas",
-    PRAC_LANGUAGE_VAL: "English / French / Spanish",
-    PRAC_ABOUT: "Dr. Elizabeth Janet Isalguez es un Médico multilingüe en Medicina Interna del programa de la Universidad de Yale rigurosa en el Hospital Bridgeport . Habla con fluidez el español y el francés , además de su nativo de Inglés . Sus intereses específicos incluyen: enfermedades tropicales , control de peso y nutrición , mejorar la salud y la vitalidad del núcleo básico.",
+
+    PRAC1_NAME: "Dr. Elizabeth J Isalguez",
+    PRAC1_QUALIFICATION: "internista",
+    PRAC1_EXPERIENCE: "11 años de experiencia",
+    PRAC1_SPECIALITY_LBL: "especialidades",
+    PRAC1_SPECIALITY_VAL: "Medicina Interna",
+    PRAC1_CERTIFICATION_LBL: "Certificaciones",
+    PRAC1_CERTIFICATION_VAL: "Certificado por la Junta",
+    PRAC1_LANGUAGE_LBL: "idiomas",
+    PRAC1_LANGUAGE_VAL: "English / French / Spanish",
+    PRAC1_ABOUT: "Dr. Elizabeth Janet Isalguez es un Médico multilingüe en Medicina Interna del programa de la Universidad de Yale rigurosa en el Hospital Bridgeport . Habla con fluidez el español y el francés , además de su nativo de Inglés . Sus intereses específicos incluyen: enfermedades tropicales , control de peso y nutrición , mejorar la salud y la vitalidad del núcleo básico.",
+
+    PRAC3_NAME: "Ketevan Vladi, MD",
+    PRAC3_QUALIFICATION: "Medicina Interna ",
+    PRAC3_EXPERIENCE: "9 años de experiencia",
+    PRAC3_SPECIALITY_LBL: "especialidades",
+    PRAC3_SPECIALITY_VAL: "Medicina Interna / General Internal Medicine / Medicina Hospital / Hospitalist",
+    PRAC3_CERTIFICATION_LBL: "Certificaciones",
+    PRAC3_CERTIFICATION_VAL: "NY State Licencia Médica \
+    2010 - Licencia Médica 2017FL Estado \
+    2008 - Junta 2017American de Medicina Interna \
+        Medicina Interna",
+    PRAC3_LANGUAGE_LBL: "idiomas",
+    PRAC3_LANGUAGE_VAL: "Inglés / Ucrania / Georgia / Rusia",
+    PRAC3_ABOUT: "Dr Ketevan Vladi es un médico especializado en Medicina Interna y Medicina del Hospital. Recibió su título de médico en la Universidad Estatal de Medicina Vinnica y completó Residencia de Medicina Interna en el Hospital Metodista de Nueva York. Ella ha estado practicando Medicina / Medicina Interna del Hospital en Miami desde 2009",
+
+
+    PRAC2_NAME: "Dr. Joan Y. Lyn, DO",
+    PRAC2_QUALIFICATION: "Medicina Familiar ",
+    PRAC2_EXPERIENCE: "7 años de experiencia",
+    PRAC2_SPECIALITY_LBL: "especialidades",
+    PRAC2_SPECIALITY_VAL: "Medicina Familiar",
+    PRAC2_CERTIFICATION_LBL: "Certificaciones",
+    PRAC2_CERTIFICATION_VAL: "AOA Certified",
+    PRAC2_LANGUAGE_LBL: "idiomas",
+    PRAC2_LANGUAGE_VAL: "Inglés / Criolla / Español",
+    PRAC2_ABOUT: "Dr. Joan Y. Lyn se graduó en la University College de Medicina Osteopática de la Nova Southeastern en 2004. Trabaja en North Miami Beach, Florida, y se especializa en Medicina Familiar. Dr. Lyn está afiliado con Kindred Hospital-Hollywood, el Memorial Hospital Miramar y Memorial Regional Hospital South. Facultad Asociado y Preceptor para residentes y estudiantes de medicina. Programa de Westchester Medical Center Medicina Familiar Certificado Family Practice Hospital de Westchester General, Medicina Familiar Programa de Residencia doble titulación en la Universidad Nova southestern; DO., MPH 2004 Undergrad a Barry universidad importante de la biología AOA Liscened ACOFP Certificado ",
+
+
     LOCATION: "Ubicación del paciente",
     UNIT: "Suite / Apt / Unidad",
     STREET: "callejero",
@@ -223,16 +263,43 @@ var FRENCH_CONSTANTS = {
     ABOUT_SECOND_LINE: "Nos praticiens discrets viendront à vous 24 heures 7 jours par semaine à votre domicile , hôtel / complexe ou l'emplacement sud de la Floride et de fournir des soins médicaux de qualité supérieure pour vous nuit ou le jour.",
     ABOUT_THIRD_LINE: "Les traitements peuvent être sur une seule fois , par - nécessité ou de manière continue . Il n'y a pas pas de secrétaires, infirmières, pas d'ambulances ou en attente de soins.",
     ABOUT_FOURTH_LINE: "Urgences surviennent sans avertissement ni préavis. Nos praticiens fournissent des temps de réponse rapides et peuvent fournir un traitement beaucoup plus rapide d'aller ensuite à l'urgence ou de trouver l'hôpital local .",
-    PRAC_NAME: "Dr. Elizabeth J Isalguez",
-    PRAC_QUALIFICATION: "interniste",
-    PRAC_EXPERIENCE: "11 ans d'expérience",
-    PRAC_SPECIALITY_LBL: "spécialités",
-    PRAC_SPECIALITY_VAL: "Médecine interne",
-    PRAC_CERTIFICATION_LBL: "Certifications",
-    PRAC_CERTIFICATION_VAL: "Board Certified",
-    PRAC_LANGUAGE_LBL: "langues",
-    PRAC_LANGUAGE_VAL: "English / French / Spanish",
-    PRAC_ABOUT: "Dr Elizabeth Janet Isalguez est Docteur en Médecine multilingue en médecine interne de l' Université de Yale programme rigoureux à l'hôpital de Bridgeport . Elle parle couramment l'espagnol et le français en plus de sa langue maternelle anglaise . Ses intérêts spécifiques comprennent : les maladies tropicales , la gestion du poids et de la nutrition , l'amélioration de la santé et de la vitalité du noyau de base.",
+
+    PRAC1_NAME: "Dr. Elizabeth J Isalguez",
+    PRAC1_QUALIFICATION: "interniste",
+    PRAC1_EXPERIENCE: "11 ans d'expérience",
+    PRAC1_SPECIALITY_LBL: "spécialités",
+    PRAC1_SPECIALITY_VAL: "Médecine interne",
+    PRAC1_CERTIFICATION_LBL: "Certifications",
+    PRAC1_CERTIFICATION_VAL: "Board Certified",
+    PRAC1_LANGUAGE_LBL: "langues",
+    PRAC1_LANGUAGE_VAL: "English / French / Spanish",
+    PRAC1_ABOUT: "Dr Elizabeth Janet Isalguez est Docteur en Médecine multilingue en médecine interne de l' Université de Yale programme rigoureux à l'hôpital de Bridgeport . Elle parle couramment l'espagnol et le français en plus de sa langue maternelle anglaise . Ses intérêts spécifiques comprennent : les maladies tropicales , la gestion du poids et de la nutrition , l'amélioration de la santé et de la vitalité du noyau de base.",
+
+    PRAC2_NAME: "Dr Joan Y. Lyn, DO",
+    PRAC2_QUALIFICATION: "Médecine familiale",
+    PRAC2_EXPERIENCE: "7 ans d'expérience",
+    PRAC2_SPECIALITY_LBL: "spécialités",
+    PRAC2_SPECIALITY_VAL: "Médecine familiale",
+    PRAC2_CERTIFICATION_LBL: "Certifications",
+    PRAC2_CERTIFICATION_VAL: "AOA certifié",
+    PRAC2_LANGUAGE_LBL: "langues",
+    PRAC2_LANGUAGE_VAL: "Anglais / Créole / Espagnol",
+    PRAC2_ABOUT: "Dr Joan Y. Lyn est diplômé du Collège de médecine ostéopathique Nova Southeastern University en 2004. Elle travaille à North Miami Beach, FL et se spécialise en médecine familiale. Dr Lyn est affilié à Kindred Hospital-Hollywood, Miramar Memorial Hospital et Memorial Hôpital régional Sud. Professeur associé et précepteur pour les résidents et étudiants en médecine. Programme Westchester Medical Center médecine familiale Board Certified Family Practice Hôpital général de Westchester, résidence en médecine familiale Programme de doubles diplômes à l'Université de la Nouvelle-sud est; DO., MPH 2,004 Undergrad à l'université Barry Biologie Major AOA Liscened ACOFP Board Certified ",
+
+    PRAC3_NAME: "Ketevan Vladi, MD",
+    PRAC3_QUALIFICATION: "Médecine interne ",
+    PRAC3_EXPERIENCE: "de 9 ans d'expérience",
+    PRAC3_SPECIALITY_LBL: "spécialités",
+    PRAC3_SPECIALITY_VAL: "Médecine interne / Médecine Interne Générale / Médecine Hôpital / Hospitalist",
+    PRAC3_CERTIFICATION_LBL: "Certifications",
+    PRAC3_CERTIFICATION_VAL: "État de New York licence médicale \
+    2010 - licence médicale 2017FL Etat \
+    2008 - Le Conseil 2017American de médecine interne \
+    médecine interne",
+    PRAC3_LANGUAGE_LBL: "langues",
+    PRAC3_LANGUAGE_VAL: "Anglais / ukrainien / géorgienne / Russie",
+    PRAC3_ABOUT: " Dr Ketevan Vladi est un médecin spécialisé en médecine interne et de médecine Hôpital. Elle a obtenu son diplôme de médecine à l'Université d'Etat de médecine Vinnica et complété résidence en médecine interne à l'Hôpital méthodiste de New York. Elle a pratiqué l'hôpital de médecine / médecine interne à Miami depuis 2009",
+
     LOCATION: "Localisation du patient",
     UNIT: "Suite / Apt / Unité",
     STREET: "de rue",
