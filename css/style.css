@@ -23,7 +23,7 @@ header img.logo{
     /*max-width: 361px;*/
 }
 
-header img.sidelogo{
+header form.sidelogo{
     float: right;
     padding-right: 6%;
     padding-top: 13%;
@@ -32,9 +32,9 @@ header img.sidelogo{
 }
 
 
-
-.wrapper{text-align:left; width: 96%; margin: 0 auto; margin-left: 100%}
-.wrapper2{text-align:left; width: 96%; margin: 0 auto;}
+<!--.wrapper{text-align:left; width: 96%; margin: 0 auto; }-->
+.wrapper{text-align:left; width: 96%; margin: 0 auto; margin-right: 100%}
+.wrapper2{text-align:left; width: 96%; margin: 0 auto;  }
 .uppercase { text-transform: uppercase; font-size: 24pt; margin-top: 4pt }
 .uppercase2 { text-transform: uppercase; font-size: 16pt; margin-top: 4pt }
 .title {display: block; height:55px; margin-top: 20px; /*width: 280px; margin-left: auto; margin-right:auto;*/ }
