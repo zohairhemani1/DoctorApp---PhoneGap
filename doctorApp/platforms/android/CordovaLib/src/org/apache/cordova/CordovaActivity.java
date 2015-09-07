@@ -49,7 +49,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewParent;
 import android.view.Window;
 import android.view.WindowManager;
 import android.webkit.ValueCallback;
@@ -73,7 +72,6 @@ import android.widget.LinearLayout;
  *       &#64;Override
  *       public void onCreate(Bundle savedInstanceState) {
  *         super.onCreate(savedInstanceState);
- *         super.init();
  *         // Load your application
  *         loadUrl(launchUrl);
  *       }
@@ -202,33 +200,14 @@ public class CordovaActivity extends Activity implements CordovaInterface {
     public void onCreate(Bundle savedInstanceState) {
         LOG.i(TAG, "Apache Cordova native platform version " + CordovaWebView.CORDOVA_VERSION + " is starting");
         LOG.d(TAG, "CordovaActivity.onCreate()");
-
-        // need to activate preferences before super.onCreate to avoid "requestFeature() must be called before adding content" exception
-        loadConfig();
-        if(!preferences.getBoolean("ShowTitle", false))
-        {
-            getWindow().requestFeature(Window.FEATURE_NO_TITLE);
-        }
-        
-        if(preferences.getBoolean("SetFullscreen", false))
-        {
-            Log.d(TAG, "The SetFullscreen configuration is deprecated in favor of Fullscreen, and will be removed in a future version.");
-            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                    WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        } else if (preferences.getBoolean("Fullscreen", false)) {
-            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                    WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        } else {
-            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN,
-                    WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
-        }
-
         super.onCreate(savedInstanceState);
 
         if(savedInstanceState != null)
         {
             initCallbackClass = savedInstanceState.getString("callbackClass");
         }
+        
+        loadConfig();
     }
 
     @SuppressWarnings("deprecation")
@@ -248,9 +227,7 @@ public class CordovaActivity extends Activity implements CordovaInterface {
     @SuppressWarnings("deprecation")
     protected void createViews() {
         // This builds the view.  We could probably get away with NOT having a LinearLayout, but I like having a bucket!
-
-        LOG.d(TAG, "CordovaActivity.createViews()");
-
+        // This builds the view.  We could probably get away with NOT having a LinearLayout, but I like having a bucket!
         Display display = getWindowManager().getDefaultDisplay();
         int width = display.getWidth();
         int height = display.getHeight();
@@ -268,14 +245,6 @@ public class CordovaActivity extends Activity implements CordovaInterface {
 
         // Add web view but make it invisible while loading URL
         appView.setVisibility(View.INVISIBLE);
-        
-        // need to remove appView from any existing parent before invoking root.addView(appView)
-        ViewParent parent = appView.getParent();
-        if ((parent != null) && (parent != root)) {
-            LOG.d(TAG, "removing appView from existing parent");
-            ViewGroup parentGroup = (ViewGroup) parent;
-            parentGroup.removeView(appView);
-        }
         root.addView((View) appView);
         setContentView(root);
 
@@ -332,6 +301,24 @@ public class CordovaActivity extends Activity implements CordovaInterface {
     @Deprecated // Call init() instead and override makeWebView() to customize.
     public void init(CordovaWebView webView, CordovaWebViewClient webViewClient, CordovaChromeClient webChromeClient) {
         LOG.d(TAG, "CordovaActivity.init()");
+
+        if(!preferences.getBoolean("ShowTitle", false))
+        {
+            getWindow().requestFeature(Window.FEATURE_NO_TITLE);
+        }
+
+        if(preferences.getBoolean("SetFullscreen", false))
+        {
+            Log.d(TAG, "The SetFullscreen configuration is deprecated in favor of Fullscreen, and will be removed in a future version.");
+            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                    WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        } else if (preferences.getBoolean("Fullscreen", false)) {
+            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                    WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        } else {
+            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN,
+                    WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
+        }
 
         appView = webView != null ? webView : makeWebView();
         if (appView.pluginManager == null) {
