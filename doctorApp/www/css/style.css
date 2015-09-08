@@ -41,7 +41,7 @@ header form.sidelogo{
 .title h1 { float: left; padding-left: 10px; }
 .footer { margin-bottom: 27px;  margin-top: 30px; text-align: center; }
 .footer2 {  text-align: center;padding-bottom:5%; }
-.footer.bottom { position:absolute; bottom:35px; left:0; margin-bottom: 0px; width:100%; }
+.footer.bottom  bottom:35px; left:0; margin-bottom: 0px; width:100%; }
 .footer.bottom * {text-align: center;}
 
 /* default style */
@@ -98,7 +98,7 @@ header form.sidelogo{
 
 /* Payment */
 .wrapper form#payment label { width: 42%; }
-.wrapper form#payment input[type='number'] { width: 53.5%; }
+.wrapper form#payment input[type='number'] { width: 145px; }
 .wrapper form#payment input[type='submit'] { margin: 0px auto; display: block; margin-top: 15px; }
 .wrapper form#payment p { margin: 0px; font-size: 9px; text-align: center; margin-top: 10px; color: #000; }
 
