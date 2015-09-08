@@ -32,8 +32,7 @@ header form.sidelogo{
 }
 
 
-<!--.wrapper{text-align:left; width: 96%; margin: 0 auto; }-->
-.wrapper{text-align:left; width: 96%; margin: 0 auto; margin-right: 100%}
+.wrapper{width: 96%; margin: 0 auto; position:absolute;}
 .wrapper2{text-align:left; width: 96%; margin: 0 auto;  }
 .uppercase { text-transform: uppercase; font-size: 24pt; margin-top: 4pt }
 .uppercase2 { text-transform: uppercase; font-size: 16pt; margin-top: 4pt }
@@ -51,7 +50,7 @@ header form.sidelogo{
 /* small screen */
 @media screen and (max-width: 600px) {
     .js #nav { display: none; }
-    .js .selectnav { display: block; }
+    .js .selectnav { display: block; margin-left:10%;}
 }
 
 
