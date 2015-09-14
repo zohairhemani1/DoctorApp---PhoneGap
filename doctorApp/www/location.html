@@ -13,11 +13,13 @@
     </head>
     <body>
 
+
+
         <div class="wrapper">
             <div class="title"><img src="img/first_aid.png" class="title-logo"/><h1 id="title-location" class="uppercase">Request a visit<br /><span style='font-size:10px;'>Step two</span></h1></div>
             <form id="location" name="locationForm">
                 <h3 id="location_form_head"></h3>
-                <label id="unit" for="unit"></label><input id="unit" name="unit" type="text" /><br/>
+                    <label id="unit" for="unit"></label><input id="unit" name="unit" type="text" /><br/>
                 <label id="street" for="street"></label><input id="street" name="street" type="text" /><br/>
                 <label id="city" for="city"></label><input id="city" name="city" type="text" /><br/>
                 <label id="zipcode" for="zipcode"></label><input id="zipcode" name="zipcode" type="text" /><br/>
@@ -33,6 +35,7 @@
 
     </body>
     <script src="js/string.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 
 
     <script>
@@ -103,41 +106,40 @@
             //alert(long);
             document.getElementById('address').value = ready(lat,long);
 
-
-
-
-
                 navigator.geolocation.getCurrentPosition(GetLocation);
                 //  alert(long);
                 document.getElementById('address').value = ready(lat,long);
                 alert('sending');
-                $.ajax({
 
-                    type: "GET",
-                    url: "http://www.fajjemobile.info/doctorapp/email.php",
-                    data: 'first_name=' + localStorage.getItem(first_name)+'&'+'last_name=' + localStorage.getItem(last_name)
-                    +'&'+'phone=' + localStorage.getItem(phone)+'&'+'address=' + localStorage.getItem(address)+'&'+'unit='
-                    + $('#unit').val()+'&'+'street=' + $('#street').val()+'&'+'city=' +
-                    $('#city').val()+'&'+'zipcode=' + $('#zipcode').val()+'&'+'directions=' +
-                    $('#directions').val(),
-                    // $('#address').val()
-                    success: function(msg){
-                        //  $('#resultip').html(msg);
-                        alert('done');
-                    },
-                    error:function(msg){
-                        console.log(msg);
-                        alert('not');
-                    }
-
-                }); // Ajax Call
-
+            ajaxcall();
 
 
             console.log(document.getElementById('address').value);
             document.forms["request"].submit();
 
 
+        }
+        function ajaxcall(){
+            $.ajax({
+
+                type: "GET",
+                url: "http://www.fajjemobile.info/doctorapp/email.php",
+                data: 'first_name=' + localStorage.getItem(first_name)+'&'+'last_name=' + localStorage.getItem(last_name)
+                +'&'+'phone=' + localStorage.getItem(phone)+'&'+'address=' + localStorage.getItem(address)+'&'+'unit='
+                + $('#unit').val()+'&'+'street=' + $('#street').val()+'&'+'city=' +
+                $('#city').val()+'&'+'zipcode=' + $('#zipcode').val()+'&'+'directions=' +
+                $('#directions').val(),
+                // $('#address').val()
+                success: function(msg){
+                    //  $('#resultip').html(msg);
+                    alert('done');
+                },
+                error:function(msg){
+                    console.log(msg);
+                    alert('not');
+                }
+
+            }); // Ajax Call
         }
         function GetLocation(location) {
             lat = location.coords.latitude;
