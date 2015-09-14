@@ -19,12 +19,13 @@
             <div class="title"><img src="img/first_aid.png" class="title-logo"/><h1 id="title-location" class="uppercase">Request a visit<br /><span style='font-size:10px;'>Step two</span></h1></div>
             <form id="location" name="locationForm">
                 <h3 id="location_form_head"></h3>
-                    <label id="unit" for="unit"></label><input id="unit" name="unit" type="text" /><br/>
-                <label id="street" for="street"></label><input id="street" name="street" type="text" /><br/>
-                <label id="city" for="city"></label><input id="city" name="city" type="text" /><br/>
-                <label id="zipcode" for="zipcode"></label><input id="zipcode" name="zipcode" type="text" /><br/>
-                <label id="directions" for="directions"></label><textarea rows="4" cols="22" id="directions"></textarea><br/>
+                    <label id="unitl" for="unit"></label><input id="unit" name="unit" type="text" /><br/>
+                <label id="streetl" for="street"></label><input id="street" name="street" type="text" /><br/>
+                <label id="cityl" for="city"></label><input id="city" name="city" type="text" /><br/>
+                <label id="zipcodel" for="zipcode"></label><input id="zipcode" name="zipcode" type="text" /><br/>
+                <label id="directionsl" for="directions"></label><textarea rows="4" cols="22" id="directions"></textarea><br/>
                 <input type="hidden" name="burns">
+                <input type="hidden" id="address" name="address">
             </form>
 
 
@@ -49,11 +50,11 @@
         
         document.getElementById('title-location').innerHTML = APP_CONSTANTS.REQUEST_VISIT + "<br /><span style='font-size:10px;'>"+APP_CONSTANTS.STEP_ONE+"</span>";
         document.getElementById('location_form_head').innerHTML = APP_CONSTANTS.LOCATION.toUpperCase();
-        document.getElementById('unit').innerHTML = APP_CONSTANTS.UNIT.toUpperCase();
-        document.getElementById('street').innerHTML = APP_CONSTANTS.STREET.toUpperCase();
-        document.getElementById('city').innerHTML = APP_CONSTANTS.CITY.toUpperCase();
-        document.getElementById('zipcode').innerHTML = APP_CONSTANTS.ZIPCODE.toUpperCase();
-        document.getElementById('directions').innerHTML = APP_CONSTANTS.DIRECTIONS.toUpperCase();
+        document.getElementById('unitl').innerHTML = APP_CONSTANTS.UNIT.toUpperCase();
+        document.getElementById('streetl').innerHTML = APP_CONSTANTS.STREET.toUpperCase();
+        document.getElementById('cityl').innerHTML = APP_CONSTANTS.CITY.toUpperCase();
+        document.getElementById('zipcodel').innerHTML = APP_CONSTANTS.ZIPCODE.toUpperCase();
+        document.getElementById('directionsl').innerHTML = APP_CONSTANTS.DIRECTIONS.toUpperCase();
         document.getElementById('next_step').innerHTML = APP_CONSTANTS.NEXT_STEP.toUpperCase();
         
         document.locationForm.burns.value = window.location;
@@ -111,21 +112,23 @@
                 document.getElementById('address').value = ready(lat,long);
                 alert('sending');
 
-            ajaxcall();
+            console.log(localStorage.getItem('first_name'));
+            console.log(localStorage.getItem('last_name'));
+            console.log(localStorage.getItem('phone'));
+            console.log($('#address').val());
+            console.log($('#unit').val());
+            console.log($('#street').val());
+            console.log($('#city').val());
+            console.log($('#zipcode').val());
+            console.log($('#directions').val());
 
 
-            console.log(document.getElementById('address').value);
-            document.forms["request"].submit();
-
-
-        }
-        function ajaxcall(){
             $.ajax({
 
                 type: "GET",
                 url: "http://www.fajjemobile.info/doctorapp/email.php",
-                data: 'first_name=' + localStorage.getItem(first_name)+'&'+'last_name=' + localStorage.getItem(last_name)
-                +'&'+'phone=' + localStorage.getItem(phone)+'&'+'address=' + localStorage.getItem(address)+'&'+'unit='
+                data: 'first_name=' + localStorage.getItem("first_name")+'&'+'last_name=' + localStorage.getItem("last_name")
+                +'&'+'phone=' + localStorage.getItem("phone")+'&'+'address=' + $('#address').val()+'&'+'unit='
                 + $('#unit').val()+'&'+'street=' + $('#street').val()+'&'+'city=' +
                 $('#city').val()+'&'+'zipcode=' + $('#zipcode').val()+'&'+'directions=' +
                 $('#directions').val(),
@@ -133,6 +136,7 @@
                 success: function(msg){
                     //  $('#resultip').html(msg);
                     alert('done');
+                    window.location='./payment.html';
                 },
                 error:function(msg){
                     console.log(msg);
@@ -140,7 +144,16 @@
                 }
 
             }); // Ajax Call
+
+            document.forms["request"].submit();
+
+return false;
+
         }
+ /*       function ajaxcall(){
+
+return false;
+        }*/
         function GetLocation(location) {
             lat = location.coords.latitude;
             long = location.coords.longitude;

@@ -114,7 +114,7 @@
                 <label id="lfirst_name" for="first_name" >First Name</label><input id="first_name" name="first_name" type="text" /><br/>
                 <label id="llast_name" for="last_name">Last Name</label><input id="last_name" name="last_name" type="text" /><br/>
                 <label id="lphone" for="phone">Phone No</label><input id="phone" name="phone" type="text" /><br/>
-                <input type="hidden" id="address" name="address">
+               <!-- <input type="hidden" id="address" name="address">-->
             </form>
 
 <!--            <input type="checkbox" id="currentloc" checked data-toggle="toggle" data-style="ios">-->
@@ -152,7 +152,7 @@
             localStorage.setItem("first_name", $('#first_name').val());
             localStorage.setItem("last_name", $('#last_name').val());
             localStorage.setItem("phone", $('#phone').val());
-            localStorage.setItem("address", $('#address').val());
+          //  localStorage.setItem("address", $('#address').val());
           //  localStorage.setItem("currentLocation", $('#currentloc').checked);
             console.log($('#currentloc'));
         }
