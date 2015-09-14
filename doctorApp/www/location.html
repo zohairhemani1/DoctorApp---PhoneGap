@@ -94,10 +94,6 @@
             if (obj.results[0].formatted_address)
                 return obj.results[0].formatted_address;
             else{obj.status}
-
-
-
-
         }
 
 
@@ -110,7 +106,7 @@
                 navigator.geolocation.getCurrentPosition(GetLocation);
                 //  alert(long);
                 document.getElementById('address').value = ready(lat,long);
-                alert('sending');
+           /*     alert('sending');
 
             console.log(localStorage.getItem('first_name'));
             console.log(localStorage.getItem('last_name'));
@@ -122,7 +118,7 @@
             console.log($('#zipcode').val());
             console.log($('#directions').val());
 
-
+*/
             $.ajax({
 
                 type: "GET",
@@ -150,19 +146,13 @@
 return false;
 
         }
- /*       function ajaxcall(){
 
-return false;
-        }*/
         function GetLocation(location) {
             lat = location.coords.latitude;
             long = location.coords.longitude;
         }
 
     </script>
-
-
-
 
 
 </html>
