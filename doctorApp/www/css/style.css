@@ -33,6 +33,7 @@ header form.sidelogo{
 
 .wrapper{width: 96%; margin: 0 auto; }
 .wrapper2{text-align:left; width: 100%; margin: 0 auto;    padding-top: 10px; }
+.wrapper3{text-align:left; width: 90%; margin: 0 auto;    padding-top: 10px; }
 .uppercase { text-transform: uppercase; font-size: 24t; margin-top: 4pt }
 .uppercase2 { text-transform: uppercase; font-size: 16pt; margin-top: 4pt }
 .title {display: block; height:55px; margin-top: 20px; /*width: 280px; margin-left: auto; margin-right:auto;*/ }

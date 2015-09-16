@@ -1,4 +1,7 @@
 var ENGLISH_CONSTANTS = {
+    MAINTEXT:"The Practitioner provided will give you the same attention, care and treatment you would get in a traditional hospital or office clinic. We pride ourselves on the quality of care and speed we give to our patients while in the relaxing environment of your home, hotel or workplace. ",
+    MAINTEXT2:" Whether you need our skilled help with fevers, cuts, flu’s or more, our certified Practitioners are experts in general and family medicine, internal medicine, geriatrics, and pediatrics. We’re the ones to call for your regular check-ups to emergency care. Our practitioners can also administer some oral medications and provide certain injections, vaccines and treatments. Our provided Practitioners will take care of all prescriptions and will provide all documentation for insurance and medical record access.",
+    MAINTEXT3:"We handle cases of treatment for the listed below",
     GETPRAC:'GET A PRACTITIONER NOW!',
     BASE_URL: "http://96.45.94.53/",
 	//BASE_URL: "http://192.168.20.139:8080/",
@@ -154,9 +157,57 @@ var ENGLISH_CONSTANTS = {
 	VERSION: "1.0.0",
 	SAVE_RECORD: "Added",
 	DELETE_RECORD: "Deleted",
-	UPDATE_RECORD: "Updated"
+	UPDATE_RECORD: "Updated",
+
+    array:['FLU'
+        ,'COLD'
+        ,'SORE THROAT'
+        ,'EAR INFECTION'
+        ,'SINUS INFECTION'
+        ,'PNEUMONIA'
+        ,'NASAL CONGESTION'
+        ,'ALLERGIES'
+        ,'HAY FEVER'
+        ,'BRONCHITIS'
+        ,'ASTHMA'
+        ,'UPPER RESPIRATORY INFECTIONS'
+        ,'POISON IVY/OAK/SUMAC'
+        ,'HEARTBURN'
+        ,'BRUISES'
+        ,'CUTS'
+        ,'WOUNDS'
+        ,'SPRAINS'
+        ,'STRAINS'
+        ,'INSECT STINGS'
+        ,' BURNS'
+        ,'VOMITING'
+        ,'FOOD POISONING'
+        ,'UPSET STOMACH'
+        ,' CRAMPS'
+        ,'DIARRHEA'
+        ,'ECZEMA'
+        ,'NAUSEA'
+        ,'INDIGESTION'
+        ,'MUSCLE PAIN'
+        ,'BACK PAIN'
+        ,'LIMB PAIN'
+        ,'HEAD PAIN'
+        ,'PINK EYE'
+        ,'EYE INFECTION'
+        ,'CONJUNCTIVITIS'
+        ,'EYE IRRITATION'
+        ,'RASH'
+        ,'SKIN INFECTION'
+        ,'SHINGLES'
+        ,'STITCHES'
+        ,'PRESCRIPTION REFILLS']
 }
 var SPANISH_CONSTANTS = {
+
+    MAINTEXT:"El practicante siempre le dará la misma atención, el cuidado y el tratamiento que se obtendría en un hospital o clínica de la oficina tradicional. Estamos orgullosos de la calidad de la atención y la velocidad que le damos a nuestros pacientes, mientras que en el ambiente relajado de su casa, hotel o lugar de trabajo.",
+    MAINTEXT2:"Si usted necesita nuestra ayuda experta con fiebres, cortes, gripe o más, nuestros practicantes certificados son expertos en medicina general y familiar, medicina interna, geriatría y pediatría. Nosotros somos los que llamar para sus chequeos regulares a la atención de emergencia. Nuestros profesionales también pueden administrar algunos medicamentos orales y proporcionar ciertas inyecciones, vacunas y tratamientos. Nuestros Profesionales prestados se hará cargo de todas las recetas y proporcionarán toda la documentación para el seguro y el acceso historia clínica.",
+    MAINTEXT3:"Nosotros nos encargamos de los casos de tratamiento para el enumeran a continuación:",
+
     SELECT_LANGUAGE: "Elige tu idioma",
     EMERGENCY: "SI ESTO ES UNA EMERGENCIA",
     CALL_911: "POR FAVOR LLAME AL 911",
@@ -232,10 +283,58 @@ var SPANISH_CONSTANTS = {
     STREET: "callejero",
     CITY: "Ciudad",
     ZIPCODE: "Código postal",
-    DIRECTIONS: "Direcciones especiales"
+    DIRECTIONS: "Direcciones especiales",
+
+    array:['GRIPE'
+     ,'FRÍO'
+     ,'DOLOR DE GARGANTA'
+     ,'INFECCIÓN DEL OÍDO'
+     ,'Infección en los senos'
+     ,'NEUMONÍA'
+     ,'CONGESTIÓN NASAL'
+     ,'ALERGIAS'
+     ,'FIEBRE DE HENO'
+     ,'BRONQUITIS'
+     ,'ASMA'
+     ,'SUPERIOR INFECCIONES RESPIRATORIAS'
+     ,'IVY VENENO / ROBLE / SUMAC'
+     ,'ACIDEZ'
+     ,'BRUISES'
+     ,'CORTES'
+     ,'HERIDAS'
+     ,'ESGUINCES'
+     ,'CEPAS'
+     ,'LAS PICADURAS DE INSECTOS'
+     ,'QUEMADURAS'
+     ,'VOMITO'
+     ,'COMIDA ENVENENADA'
+     ,'DOLOR DE BARRIGA'
+     ,'CALAMBRES'
+     ,'DIARREA'
+     ,'ECZEMA'
+     ,'NÁUSEA'
+     ,'INDIGESTIÓN'
+     ,'DOLOR MUSCULAR'
+     ,'DOLOR DE ESPALDA'
+     ,'Dolor en las extremidades'
+     ,'DOLOR DE CABEZA'
+     ,'OJO ROSA'
+     ,'INFECCION OCULAR'
+     ,'CONJUNTIVITIS'
+     ,'IRRITACIÓN DE OJO'
+     ,'RASH'
+     ,'INFECCIÓN DE LA PIEL'
+     ,'TEJAS'
+     ,'PUNTOS'
+     ,'Prescripción de recambio']
 }
 
 var FRENCH_CONSTANTS = {
+    MAINTEXT:"Le praticien fournie vous donnera la même attention, les soins et le traitement que vous obtiendriez dans un hôpital ou une clinique bureau traditionnel. Nous sommes fiers de la qualité des soins et la vitesse que nous donnons à nos patients tandis que dans le cadre reposant de votre domicile, hôtel ou lieu de travail.",
+    MAINTEXT2:"Que vous ayez besoin de notre aide qualifiée de fièvres, de coupures, de la grippe ou plus, nos praticiens certifiés sont des experts en médecine générale et familiale, la médecine interne, la gériatrie et la pédiatrie. Nous sommes les seuls à appeler pour votre contrôle régulier à des soins d'urgence. Nos praticiens peuvent aussi administrer certains médicaments par voie orale et de fournir certaines injections, des vaccins et des traitements. Nos praticiens prévues vont prendre soin de toutes les ordonnances et fournira toute la documentation pour l'assurance et l'accès de dossier médical.",
+    MAINTEXT3:"Nous nous occupons de cas de traitement pour la liste ci-dessous:",
+
+
     GETPRAC:"GET UN PRATICIEN MAINTENANT!",
     SELECT_LANGUAGE: "Choisissez votre langue",
     EMERGENCY: "Si cela est une URGENCE",
@@ -309,7 +408,50 @@ var FRENCH_CONSTANTS = {
     STREET: "de rue",
     CITY: "Ville",
     ZIPCODE: "Code postal",
-    DIRECTIONS: "Indications spéciales"
+    DIRECTIONS: "Indications spéciales",
+
+    array:['GRIPPE',
+        'FROID',
+        'GORGE IRRITÉE',
+        "INFECTION DE L'OREILLE",
+        'INFECTION DES SINUS',
+        'PNEUMONIE',
+        'CONGESTION NASALE',
+        'ALLERGIES',
+        'FIÈVRE DES FOINS',
+        'BRONCHITE',
+        'ASTHME',
+        'RESPIRATOIRE INFECTIONS',
+        'POISON IVY / OAK / SUMAC',
+        'HEARTBURN',
+        'CONTUSIONS',
+        'COUPES',
+        'PLAIES',
+        'ENTORSES',
+        'SOUCHES',
+        "LES PIQÛRES D'INSECTES",
+        'BURNS',
+        'VOMIR',
+        'INTOXICATION ALIMENTAIRE',
+        'ESTOMAC',
+        'CRAMPES',
+        'DIARRHÉE',
+        'ECZÉMA',
+        'NAUSÉE',
+        'INDIGESTION',
+        'DOULEUR MUSCULAIRE',
+        'MAL AU DOS',
+        'Douleurs des membres',
+        'MAL DE TÊTE',
+        'ŒIL ROSE',
+        "Infection de l'oeil",
+        'CONJONCTIVITE',
+        'IRRITATION DES YEUX',
+        'RASH',
+        'Infection de la peau',
+        'BARDEAUX',
+        'POINTS',
+        "Renouvellements d'ordonnance"]
 }
 
 var JSON_CONSTANTS = {
@@ -325,3 +467,4 @@ var JSON_CONSTANTS = {
     STATUS_CODE_403: "403",
     STATUS_CODE_302: "302",
 }
+
