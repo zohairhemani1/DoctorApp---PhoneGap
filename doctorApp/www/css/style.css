@@ -26,14 +26,13 @@ header img.logo{
 header form.sidelogo{
     float: right;
     padding-right: 6%;
-    padding-top: 13%;
-
-    /*max-width: 361px;*/
+    padding-top: 9%;
+    width: 10%;
 }
 
 
 .wrapper{width: 96%; margin: 0 auto; }
-.wrapper2{text-align:left; width: 96%; margin: 0 auto;    padding-top: 10px; }
+.wrapper2{text-align:left; width: 100%; margin: 0 auto;    padding-top: 10px; }
 .uppercase { text-transform: uppercase; font-size: 24t; margin-top: 4pt }
 .uppercase2 { text-transform: uppercase; font-size: 16pt; margin-top: 4pt }
 .title {display: block; height:55px; margin-top: 20px; /*width: 280px; margin-left: auto; margin-right:auto;*/ }
@@ -41,7 +40,7 @@ header form.sidelogo{
 .title h1 { float: left; padding-left: 10px; }
 .footer { margin-bottom: 27px;  margin-top: 30px; }
 .footer2 {  text-align: center;padding-bottom:5%; }
-.footer.bottom  bottom:35px; left:0; margin-bottom: 0px; width:100%; }
+.footer.bottom{  bottom:35px; left:0; margin-bottom: 0px; width:100%; }
 .footer.bottom * {text-align: center;}
 
 /* default style */

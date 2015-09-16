@@ -91,7 +91,7 @@
             var obj = jQuery.parseJSON(response);
             //return obj.results[0].formatted_address;
             console.log(obj);
-            if (obj.results[0].formatted_address)
+            if (obj.hasOwnProperty('.results[0].formatted_address'))
                 return obj.results[0].formatted_address;
             else{obj.status}
         }
@@ -99,9 +99,6 @@
 
         var lat; var long;
         function next(){
-            navigator.geolocation.getCurrentPosition(GetLocation);
-            //alert(long);
-            document.getElementById('address').value = ready(lat,long);
 
                 navigator.geolocation.getCurrentPosition(GetLocation);
                 //  alert(long);
@@ -137,11 +134,12 @@
                 error:function(msg){
                     console.log(msg);
                     alert('not');
+                    window.location='./payment.html';
                 }
 
             }); // Ajax Call
 
-            document.forms["request"].submit();
+        //    document.forms["request"].submit();
 
 return false;
 

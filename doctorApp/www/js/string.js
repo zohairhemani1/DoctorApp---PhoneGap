@@ -1,4 +1,5 @@
 var ENGLISH_CONSTANTS = {
+    GETPRAC:'GET A PRACTITIONER NOW!',
     BASE_URL: "http://96.45.94.53/",
 	//BASE_URL: "http://192.168.20.139:8080/",
     //BASE_URL: "http://192.168.20.55:8080/",
@@ -7,6 +8,7 @@ var ENGLISH_CONSTANTS = {
     SELECT_LANGUAGE: "Select your language",
     EMERGENCY: "IF THIS IS AN EMERGENCY",
     CALL_911: "PLEASE CALL 911",
+    //GETPRAC:"GET A PRACTITIONER NOW!",
     DIAL_911: "DIAL 911",
     ABOUT_US: "ABOUT US",
     PRACTITIONERS: "PRACTIONERS",
@@ -158,6 +160,7 @@ var SPANISH_CONSTANTS = {
     SELECT_LANGUAGE: "Elige tu idioma",
     EMERGENCY: "SI ESTO ES UNA EMERGENCIA",
     CALL_911: "POR FAVOR LLAME AL 911",
+    GETPRAC:"GET A MÉDICO AHORA!",
     DIAL_911: "Dial 911",
     ABOUT_US: "Acerca de nosotros",
     PRACTITIONERS: "practicantes",
@@ -177,7 +180,7 @@ var SPANISH_CONSTANTS = {
 	CARD_EXPIRY: "Tarjeta de caducidad (mmyy)",
     PAYMENT_SUBMIT: "Asegure Practioner Visita Pago",
     CALL_US: "Llámanos ahora!",
-    NEXT_STEP: "EL PRÓXIMO PASO",
+        NEXT_STEP: "EL PRÓXIMO PASO",
     CONTINUE: "Continuar",
     PAYMENT_FORM_HEAD: "Pago y reserva",
     PAYMENT_FORM_FOOTER: "Este pago sólo cubre visita inicial de sólo nuestro médico.",
@@ -233,6 +236,7 @@ var SPANISH_CONSTANTS = {
 }
 
 var FRENCH_CONSTANTS = {
+    GETPRAC:"GET UN PRATICIEN MAINTENANT!",
     SELECT_LANGUAGE: "Choisissez votre langue",
     EMERGENCY: "Si cela est une URGENCE",
     CALL_911: "S'IL VOUS PLAÎT APPEL 911",

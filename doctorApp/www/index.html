@@ -14,22 +14,22 @@
         <header>
             <img class="logo" src="img/logo.png" />
 			<form class="sidelogo" action="./menu.html">
-					<input type="image" src="img/doc2.png" alt="menu" >
+                <input type="image" src="img/doc2.png" alt="menu" style="width: 100%;">
 			</form>			
         </header>
         <div class="wrapper2">
-            <h1 id="index_head" style="text-align: center;">Select 323 language </h1>
-           <div align="center"> 
+            <h1 id="index_head" style="text-align: center; padding-left: 6%">Select 323 language </h1>
+           <div align="center">
             <ul id="nav">
-                <li><a href="index.html?1">English</a></li>
-                <li><a href="index.html?2">Spanish</a></li>
-                <li><a href="index.html?3">French</a></li>
+                <li><a href="index.html?1" style="font-size: 140%">English</a></li>
+                <li><a href="index.html?2"  style="font-size: 140%">Spanish</a></li>
+                <li><a href="index.html?3" style="font-size: 140%">French</a></li>
             </ul>
             </div>
             
             <div style="text-align:center;" class="footer bottom"><p id="emergency_call" class="uppercase2">IF this is an emergency<br />please call 911</p>
-            <div  align="center" style="margin-top:10px; padding-left:32%"><a class="btns dial" id="dial" href="tel:911" target="_blank" style="margin-top: 25%;display:block;width:36%;    margin-left: -37%;font-size: 120%;border: 1px solid white;">DIAL 911</a></div>
-        </div>
+         <!--   <div  align="center" style="margin-top:10px; padding-left:32%"><a class="btns dial" id="dial" href="tel:911" target="_blank" style="margin-top: 25%;display:block;width:36%;    margin-left: -37%;font-size: 120%;border: 1px solid white;">DIAL 911</a></div>
+        --></div>
             </div>
     </body>
     <script src="js/selectnav/selectnav.min.js"></script>
@@ -64,7 +64,7 @@
         
         document.getElementById('index_head').innerHTML = APP_CONSTANTS.SELECT_LANGUAGE;
         document.getElementById('emergency_call').innerHTML = APP_CONSTANTS.EMERGENCY+"<br />"+APP_CONSTANTS.CALL_911;
-        document.getElementById('dial').innerHTML = APP_CONSTANTS.DIAL_911;
+       // document.getElementById('dial').innerHTML = APP_CONSTANTS.DIAL_911;
         
     </script>
 </html>

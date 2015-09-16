@@ -7,7 +7,7 @@ h1, h2, h3, h4,
 h5, h6, noframes,
 ol, p, ul, center,
 dir, hr, menu, pre   { display: block; unicode-bidi: embed }
-li              { display: list-item }
+li              { display: list-item; font-size: 100% }
 head            { display: none }
 table           { display: table }
 tr              { display: table-row }
