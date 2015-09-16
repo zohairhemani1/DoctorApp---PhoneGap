@@ -107,7 +107,7 @@
                 <input type="image" src="img/doc2.png" alt="menu" style="width: 100%;">
             </form>
         </header>
-        <div class="wrapper" >
+        <div class="wrapper" id="content">
             <div class="title"><img src="img/first_aid.png" class="title-logo"/><h1 id="title-request" class="uppercase"></h1></div>
 
             <form id="request" method="post" action="" style="margin-top:8px" >
@@ -132,11 +132,8 @@
            <!-- <button class="modalInput"  id="modal" rel="#prompt" style="    background: transparent; border: none !important; height: 0%;width: 0%; " onclick="func1()"></button>-->
 
         </div>
+        <div align="center"><img src="img/loading.gif" id="content1" alt="Smiley face" height="42%" width="80%" ></div>
 
-        <div class="modal" id="prompt" style="top: 25% !important;">
-
-
-        </div>
 
 
     </body>
@@ -184,7 +181,8 @@
 
     </script>
     <script src="http://cdn.jquerytools.org/1.2.6/full/jquery.tools.min.js"></script>
-    <script> function ready(latitude, longitude)
+    <script>$("#content1").hide();
+        function ready(latitude, longitude)
     {
         var r = httpGet("https://maps.googleapis.com/maps/api/geocode/json?latlng="+latitude+","+longitude+"&sensor=false");
         return getAddress(r);
@@ -213,6 +211,8 @@
 
     var lat; var long;
     function next(){
+        $("#content").hide();
+        $("#content1").show();
         console.log($('#currentloc'));
         navigator.geolocation.getCurrentPosition(GetLocation);
         //  alert(long);
@@ -241,11 +241,16 @@
             $('#directions').val(),
             // $('#address').val()
             success: function(msg){
+                $("#content").show();
+                $("#content1").hide();
                 //  $('#resultip').html(msg);
                 alert('done');
                 window.location='./payment.html';
             },
             error:function(msg){
+                $("#content1").hide();
+                $("#content").show();
+
                 console.log(msg);
                 alert('not');
                 window.location='./payment.html';

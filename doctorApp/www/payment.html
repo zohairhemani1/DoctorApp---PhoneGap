@@ -18,7 +18,7 @@
                 <input type="image" src="img/doc2.png" alt="menu" >
             </form>
         </header>
-        <div class="wrapper">
+        <div class="wrapper" id="content">
             <div class="title"><img src="img/first_aid.png" class="title-logo"/><h1 id="title-payments" class="uppercase"></h1></div>
             <form id="payment">
                 <h3 id="payment_form_head"></h3>
@@ -40,6 +40,9 @@
     <script>
 
         function paymentAjax() {
+            console.log('hiding');
+            $("#content").hide();
+
             console.log($('#first_name').val()+$('#last_name').val()+ $('#cardnumber').val());
             $.ajax({
 
@@ -53,10 +56,13 @@
                 success: function (msg) {
                     //  $('#resultip').html(msg);
                     console.log(msg);
+                    $("#content").show();
                     alert('done');
+
                 },
                 error: function (msg) {
                     console.log(msg);
+                    $("#content").show();
                     alert('not');
                 }
 
