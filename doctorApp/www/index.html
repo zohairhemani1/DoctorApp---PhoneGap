@@ -21,12 +21,12 @@
             <h1 id="index_head" style="text-align: center; padding-left: 6%">Select 323 language </h1>
            <div align="center">
             <ul id="nav">
-                <li><a href="index.html?1" style="font-size: 140%">English</a></li>
-                <li><a href="index.html?2"  style="font-size: 140%">Spanish</a></li>
-                <li><a href="index.html?3" style="font-size: 140%">French</a></li>
+                <li><a href="javascript:newfunc('English');" style="font-size: 140%">English</a></li>
+                <li><a href="javascript:newfunc('Spanish');"  style="font-size: 140%">Spanish</a></li>
+                <li><a href="javascript:newfunc('French');" style="font-size: 140%">French</a></li>
             </ul>
             </div>
-            
+
             <div style="text-align:center;" class="footer bottom"><p id="emergency_call" class="uppercase2">IF this is an emergency<br />please call 911</p>
          <!--   <div  align="center" style="margin-top:10px; padding-left:32%"><a class="btns dial" id="dial" href="tel:911" target="_blank" style="margin-top: 25%;display:block;width:36%;    margin-left: -37%;font-size: 120%;border: 1px solid white;">DIAL 911</a></div>
         --></div>
@@ -39,11 +39,15 @@
             autoselect: true,
             nested: false,
             indent:'>',
-            label: localStorage.language,
+            label: '--Menu--',
         });
     </script>s
     <script src="js/string.js"></script>
     <script>
+        function newfunc(lang){
+            localStorage.language=lang;
+            window.location='./menu.html';
+        }
         function getSelectedLanguage(elementId) {
             var elt = document.getElementById(elementId);
 
