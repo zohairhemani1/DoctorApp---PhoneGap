@@ -23,13 +23,14 @@
             <div class="title"><img src="img/first_aid.png" class="title-logo"/><h1 id="title-payments" class="uppercase"></h1></div>
             <form id="payment">
                 <h3 id="payment_form_head"></h3>
-                <div id="statusreturn" style="color: white">Status :</div>
+                <div id="statusreturn" style="color: black">Status :</div>
+                <div id="errorcheck" style="color: black">Error</div>
                 <label id="first_namel" for="first_name"></label><input id="first_name" size="16" name="first_name" type="text" /><br/>
                 <label id="last_namel" for="last_name"></label><input id="last_name" size="16" name="last_name" type="text" /><br/>
                 <label id="emaill" for="email"></label><input id="email" name="patient_name" size="16" type="text" /><br/>
                 <label id="amountl" for="amount"></label><input id="amount" name="amount" type="number" /><br/>
                 <label id="cardnumberl" for="cardnumber"></label><input id="cardnumber" name="cardnumber" type="number" /><br/>
-                <label id="cvvl" for="cvv"></label><input id="cvv" name="cvv" size="16" type="text" /><br/>
+                <label id="cvvl" for="cvv"></label><input id="cvv" name="cvv" size="16" type="text" type="number" /><br/>
                 <label id="cardexpiryl" for="cardexpiry"></label><input id="cardexpiry" name="cardexpiry" type="number" /><br/>
                 <div align="center"><img src="img/loading.gif" id="content1"  height="10%" width="20.2%" style="padding-bottom: -50%" ></div><br/>
                 <input type="submit" id="btn_submit" onclick="  paymentAjax()"  />
@@ -49,7 +50,40 @@
 
        $("#content1").hide();
         $("#statusreturn").hide();
+        $("#errorcheck").hide();
+        function validateEmail(email) {
+            var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+            //alert(re.test(email));
+            return re.test(email);
+        }
+        function errorexsist(){
+            if(!validateEmail(document.getElementById('email').value)){
+                if(document.getElementById('first_name').value.length < 1||document.getElementById('last_name').value.length < 1||document.getElementById('email').value.length < 1
+                ||document.getElementById('cvv').value.length < 1||document.getElementById('cardnumber').value.length < 1||document.getElementById('cardexpiry').value.length < 1||
+                        document.getElementById('amount').value.length < 1){
+                    document.getElementById('errorcheck').innerHTML="Complete all the fields and enter a valid email";
+                //no valid emai fields missing
+                }
+                else{ document.getElementById('errorcheck').innerHTML="Enter a valid email";
+                    //no valid email
+                }
+                $("#errorcheck").show();
+                return true}
+            else{ if(document.getElementById('first_name').value.length < 1||document.getElementById('last_name').value.length < 1||document.getElementById('email').value.length < 1
+                    ||document.getElementById('cvv').value.length < 1||document.getElementById('cardnumber').value.length < 1||document.getElementById('cardexpiry').value.length < 1||
+                    document.getElementById('amount').value.length < 1){
+                document.getElementById('errorcheck').innerHTML="Complete all the fields";
+                $("#errorcheck").show();
+                //no valid emai fields missing
+                return true;
+            }
+                else
+            {return false}}
+        }
         function paymentAjax() {
+            $("#errorcheck").hide();
+            if(errorexsist()){}
+            else{
             console.log('hiding');
             $("#content1").show();
            // $("#content").hide();
@@ -87,7 +121,7 @@
                 }
 
             }); // Ajax Call
-        }
+        }}
 
 
 

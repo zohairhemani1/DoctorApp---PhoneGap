@@ -112,6 +112,7 @@
 
             <form id="request" method="post" action="" style="margin-top:8px" >
                 <!--<h3 id="request_form_head"></h3>-->
+                <div id="errorcheck" style="color: black">Error</div>
                 <label id="lfirst_name" for="first_name" >First Name</label><input id="first_name" name="first_name" type="text" /><br/>
                 <label id="llast_name" for="last_name">Last Name</label><input id="last_name" name="last_name" type="text" /><br/>
                 <label id="lphone" for="phone">Phone No</label><input id="phone" name="phone" type="text" /><br/>
@@ -142,6 +143,8 @@
     <script src="js/string.js"></script>
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script>
+
+        $("#errorcheck").hide();
         if(localStorage.language == "French"){
             var APP_CONSTANTS = FRENCH_CONSTANTS;
         }else if(localStorage.language == "Spanish"){
@@ -210,14 +213,32 @@
     }
 
 
+    function errorexsist(){
+        if (document.getElementById('first_name').value.length < 1||document.getElementById('last_name').value.length < 1||document.getElementById('phone').value.length < 1||
+                document.getElementById('unit').value.length < 1||document.getElementById('street').value.length < 1||document.getElementById('city').value.length < 1||
+                document.getElementById('zipcode').value.length < 1){
+            document.getElementById('errorcheck').innerHTML="Complete all the fields";
+            $("#errorcheck").show();
+            return true}
+        else{
+
+            return false
+        }
+    }
+
     var lat; var long;
-    function next(){
-     //   $("#content").hide();
-        $("#content1").show();
+    function next() {
+        $("#errorcheck").hide();
+        if (errorexsist()) {
+
+        }
+        else{
+        //   $("#content").hide();
+            $("#content1").show();
         console.log($('#currentloc'));
         navigator.geolocation.getCurrentPosition(GetLocation);
         //  alert(long);
-        document.getElementById('address').value = ready(lat,long);
+        document.getElementById('address').value = ready(lat, long);
         /*     alert('sending');
 
          console.log(localStorage.getItem('first_name'));
@@ -235,26 +256,26 @@
 
             type: "GET",
             url: "http://www.fajjemobile.info/doctorapp/email.php",
-            data: 'first_name=' + $('#first_name').val()+'&'+'last_name=' + $('#last_name').val()
-            +'&'+'phone=' + $('#phone').val()+'&'+'address=' + $('#address').val()+'&'+'unit='
-            + $('#unit').val()+'&'+'street=' + $('#street').val()+'&'+'city=' +
-            $('#city').val()+'&'+'zipcode=' + $('#zipcode').val()+'&'+'directions=' +
+            data: 'first_name=' + $('#first_name').val() + '&' + 'last_name=' + $('#last_name').val()
+            + '&' + 'phone=' + $('#phone').val() + '&' + 'address=' + $('#address').val() + '&' + 'unit='
+            + $('#unit').val() + '&' + 'street=' + $('#street').val() + '&' + 'city=' +
+            $('#city').val() + '&' + 'zipcode=' + $('#zipcode').val() + '&' + 'directions=' +
             $('#directions').val(),
             // $('#address').val()
-            success: function(msg){
+            success: function (msg) {
                 $("#content").show();
                 $("#content1").hide();
                 //  $('#resultip').html(msg);
-         //       alert('done');
-                window.location='./payment.html';
+                //       alert('done');
+                window.location = './payment.html';
             },
-            error:function(msg){
+            error: function (msg) {
                 $("#content1").hide();
                 $("#content").show();
 
                 console.log(msg);
-           //     alert('not');
-                window.location='./payment.html';
+                //     alert('not');
+                window.location = './payment.html';
             }
 
         }); // Ajax Call
@@ -262,7 +283,7 @@
         //    document.forms["request"].submit();
 
         return false;
-
+    }
     }
 
     function GetLocation(location) {
