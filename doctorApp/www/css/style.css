@@ -92,7 +92,7 @@ header form.sidelogo{
 .wrapper form { background-color: #ccc; border-radius: 10px; margin-top: 20px; padding:10px;}
 .wrapper form h3 { color:#000; margin:0px 0px 0px 0px; }
 .wrapper form label { display:inline-block; color:#000; margin-left: 0px; width: 25%; }
-.wrapper form input[type='text'],input[type='number'],textarea { margin-left: 5px; margin-top: 10px; }
+.wrapper form input[type='text'],input[type='number'],textarea { margin-left: 9px; margin-top: 10px; }
 
 /* Payment */
 .wrapper form#location label { width: 33%; }
