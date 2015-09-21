@@ -36,7 +36,7 @@
             </form>
            <!-- <div class="footer"><a class="btns callus" id="callus" href="tel:" target="_blank">Call Us Now!</a></div>-->
         </div>
-        <div align="center"><img src="img/loading.gif" id="content1" alt="Smiley face" height="42%" width="80%" ></div>
+        <div align="center"><img src="img/loading.gif" id="content1"  height="42%" width="80%" ></div>
     </body>
     <script src="js/string.js"></script>
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -46,7 +46,7 @@
             paymentAjax();
         });
 
-        $("#content1").hide();
+       $("#content1").hide();
         $("#statusreturn").hide();
         function paymentAjax() {
             console.log('hiding');
@@ -69,7 +69,7 @@
                     //console.log(msg);
                     $("#content").show();
                     $("#content1").hide();
-                    alert('done');
+                   // alert('done');
                     document.getElementById('statusreturn').innerHTML=msg;
                     $("#statusreturn").show();
 
@@ -79,8 +79,8 @@
                    // console.log(msg);
                     $("#content").show();
                     $("#content1").hide();
-                    alert('not');
-                    alert(msg);
+                  //  alert('not');
+                   // alert(msg);
                         document.getElementById('statusreturn').innerHTML=msg;
                     $("#statusreturn").show();
                 }
