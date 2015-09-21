@@ -124,6 +124,7 @@
                 <label id="directionsl" for="directions"></label><textarea rows="4" cols="22" id="directions"></textarea><br/>
                 <input type="hidden" name="burns">
                 <input type="hidden" id="address" name="address">
+                <div align="center"><img src="img/loading.gif" id="content1" alt="Smiley face" height="10%" width="20.2%" ></div>
             </form>
 
 
@@ -132,7 +133,7 @@
            <!-- <button class="modalInput"  id="modal" rel="#prompt" style="    background: transparent; border: none !important; height: 0%;width: 0%; " onclick="func1()"></button>-->
 
         </div>
-        <div align="center"><img src="img/loading.gif" id="content1" alt="Smiley face" height="42%" width="80%" ></div>
+
 
 
 
@@ -211,7 +212,7 @@
 
     var lat; var long;
     function next(){
-        $("#content").hide();
+     //   $("#content").hide();
         $("#content1").show();
         console.log($('#currentloc'));
         navigator.geolocation.getCurrentPosition(GetLocation);

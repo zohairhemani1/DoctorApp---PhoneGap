@@ -31,12 +31,13 @@
                 <label id="cardnumberl" for="cardnumber"></label><input id="cardnumber" name="cardnumber" type="number" /><br/>
                 <label id="cvvl" for="cvv"></label><input id="cvv" name="cvv" size="16" type="text" /><br/>
                 <label id="cardexpiryl" for="cardexpiry"></label><input id="cardexpiry" name="cardexpiry" type="number" /><br/>
+                <div align="center"><img src="img/loading.gif" id="content1"  height="10%" width="20.2%" style="padding-bottom: -50%" ></div><br/>
                 <input type="submit" id="btn_submit" onclick="  paymentAjax()"  />
                 <i><p id="payment_form_footer"></p></i>
             </form>
            <!-- <div class="footer"><a class="btns callus" id="callus" href="tel:" target="_blank">Call Us Now!</a></div>-->
         </div>
-        <div align="center"><img src="img/loading.gif" id="content1"  height="42%" width="80%" ></div>
+
     </body>
     <script src="js/string.js"></script>
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -51,7 +52,7 @@
         function paymentAjax() {
             console.log('hiding');
             $("#content1").show();
-            $("#content").hide();
+           // $("#content").hide();
 
             console.log($('#first_name').val()+$('#last_name').val()+ $('#cardnumber').val()+'sending ajax');
             $.ajax({
