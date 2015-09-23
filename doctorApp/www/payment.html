@@ -97,6 +97,7 @@
             console.log($('#first_name').val()+$('#cardnumber').val()+ $('#cardexpiry').val()+'sending ajax');
             $.ajax({
                 type: "POST",
+                async: false,
                 url: "http://www.fajjemobile.info/doctorapp/requestpayment.php",
                 data: 'first_name=' + $('#first_name').val() + '&' + 'last_name=' + $('#last_name').val()
                 + '&' + 'email=' + $('#email').val() + '&' + 'amount=' + $('#amount').val() + '&' + 'cardnumber='
@@ -111,7 +112,7 @@
                     $("#content1").hide();
                     alert('done');
                   //  alert(msg);
-                    document.getElementById('statusreturn').innerHTML=JSON.stringify(msg);
+                    document.getElementById('statusreturn').innerHTML=msg;
                     $("#statusreturn").show();
                     $("#btn_submit").show();
 
@@ -124,7 +125,7 @@
                    alert('not');
                    // alert(msg);
                    // alert(msg);
-                    document.getElementById('statusreturn').innerHTML=JSON.stringify(msg);
+                    document.getElementById('statusreturn').innerHTML=msg;
                     $("#statusreturn").show();
                     $("#btn_submit").show();
                 }
