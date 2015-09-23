@@ -25,6 +25,7 @@
                 <h3 id="payment_form_head"></h3>
                 <div id="statusreturn" style="color: black">Status :</div>
                 <div id="errorcheck" style="color: red">Error</div>
+                <br>
                 <label id="first_namel" for="first_name"></label><input id="first_name" size="16" name="first_name" type="text" /><br/>
                 <label id="last_namel" for="last_name"></label><input id="last_name" size="16" name="last_name" type="text" /><br/>
                 <label id="emaill" for="email"></label><input id="email" name="patient_name" size="16" type="text" /><br/>
@@ -33,7 +34,7 @@
                 <label id="cvvl" for="cvv"></label><input id="cvv" name="cvv" size="16" type="text" type="number" /><br/>
                 <label id="cardexpiryl" for="cardexpiry"></label><input id="cardexpiry" name="cardexpiry" type="number" /><br/>
                 <div align="center"><img src="img/loading.gif" id="content1"  height="10%" width="20.2%" style="padding-bottom: -50%" ></div><br/>
-                <input type="submit" id="btn_submit" onclick="  paymentAjax()"  />
+                <input type="submit" id="btn_submit"   />
                 <i><p id="payment_form_footer"></p></i>
             </form>
            <!-- <div class="footer"><a class="btns callus" id="callus" href="tel:" target="_blank">Call Us Now!</a></div>-->
@@ -84,10 +85,12 @@
             {return false}}
         }
         function paymentAjax() {
+
+            $("#btn_submit").hide();
             $("#errorcheck").hide();
             if(errorexsist()){}
             else{
-            console.log('hiding');
+            console.log('pressed');
             $("#content1").show();
            // $("#content").hide();
 
@@ -107,8 +110,10 @@
                     $("#content").show();
                     $("#content1").hide();
                    // alert('done');
+                    alert(msg);
                     document.getElementById('statusreturn').innerHTML=msg;
                     $("#statusreturn").show();
+                    $("#btn_submit").show();
 
                 },
                 error: function (msg) {
@@ -118,8 +123,10 @@
                     $("#content1").hide();
                   //  alert('not');
                    // alert(msg);
+                    alert(msg);
                         document.getElementById('statusreturn').innerHTML=msg;
                     $("#statusreturn").show();
+                    $("#btn_submit").show();
                 }
 
             }); // Ajax Call
