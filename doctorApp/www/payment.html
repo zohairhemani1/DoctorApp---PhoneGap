@@ -31,7 +31,7 @@
                 <label id="emaill" for="email"></label><input id="email" name="patient_name" size="16" type="text" /><br/>
                 <label id="amountl" for="amount"></label><input id="amount" name="amount" size="16" type="text" value="500.00 USD"/><br/>
                 <label id="cardnumberl" for="cardnumber"></label><input id="cardnumber" name="cardnumber" type="number" /><br/>
-                <label id="cvvl" for="cvv"></label><input id="cvv" name="cvv" size="16" type="text" type="number" /><br/>
+                <label id="cvvl" for="cvv"></label><input id="cvv" name="cvv" size="16"  type="number" /><br/>
                 <label id="cardexpiryl" for="cardexpiry"></label><input id="cardexpiry" name="cardexpiry" type="number" /><br/>
                 <div align="center"><img src="img/loading.gif" id="content1"  height="10%" width="20.2%" style="padding-bottom: -50%" ></div><br/>
                 <input type="submit" id="btn_submit"   />
@@ -105,26 +105,26 @@
                 // $('#address').val()
                 success: function (msg) {
                     //  $('#resultip').html(msg);
-                    console.log(msg);
+                    console.log(JSON.stringify(msg));
                     //console.log(msg);
                     $("#content").show();
                     $("#content1").hide();
-                   // alert('done');
-                    alert(msg);
-                    document.getElementById('statusreturn').innerHTML=msg;
+                    alert('done');
+                  //  alert(msg);
+                    document.getElementById('statusreturn').innerHTML=JSON.stringify(msg);
                     $("#statusreturn").show();
                     $("#btn_submit").show();
 
                 },
                 error: function (msg) {
-                    console.log(msg);
+                    console.log(JSON.stringify(msg));
                    // console.log(msg);
                     $("#content").show();
                     $("#content1").hide();
-                  //  alert('not');
+                   alert('not');
                    // alert(msg);
-                    alert(msg);
-                        document.getElementById('statusreturn').innerHTML=msg;
+                   // alert(msg);
+                    document.getElementById('statusreturn').innerHTML=JSON.stringify(msg);
                     $("#statusreturn").show();
                     $("#btn_submit").show();
                 }
