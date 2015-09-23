@@ -91,15 +91,14 @@
             $("#content1").show();
            // $("#content").hide();
 
-            console.log($('#first_name').val()+$('#last_name').val()+ $('#cardnumber').val()+'sending ajax');
+            console.log($('#first_name').val()+$('#cardnumber').val()+ $('#cardexpiry').val()+'sending ajax');
             $.ajax({
-
                 type: "POST",
                 url: "http://www.fajjemobile.info/doctorapp/requestpayment.php",
                 data: 'first_name=' + $('#first_name').val() + '&' + 'last_name=' + $('#last_name').val()
                 + '&' + 'email=' + $('#email').val() + '&' + 'amount=' + $('#amount').val() + '&' + 'cardnumber='
-                + $('#cardnumber').val() + '&' + 'cvv=' + $('#cvv').val() + '&' + 'cardexpiry=' +
-                $('#cardexpiry').val(),
+                + $('#cardnumber').val() + '&' + 'cardexpiry=' +
+                $('#cardexpiry').val() + '&'+ 'cvv=' + $('#cvv').val() ,
                 // $('#address').val()
                 success: function (msg) {
                     //  $('#resultip').html(msg);
